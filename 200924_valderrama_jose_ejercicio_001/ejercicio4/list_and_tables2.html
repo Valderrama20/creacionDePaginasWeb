@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <title>lista de tareas y tabla de contactos</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <meta chartset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="background-color: black; color: white;">
+    <h1>lista de tareas y tabla de contactos</h1>
+    <div id="tablesContainer">
+        <h2>Tablas usando rowspan y colspan</h2>
+        <table border="1" cellpadding="15">
+            <thead>
+                <tr>
+                    <th>Horas</th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miercoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                </tr>
+            </thead>
+            <tbody align="center">
+                <!-- Primera linea -->
+                <tr>
+                    <td>8:00-9:00</td>
+                    <td rowspan="2">Matematicas</td>
+                    <td>Hisotria</td>
+                    <td>Quimica</td>
+                    <td rowspan="2">Fisica</td>
+                    <td>Ingles</td>
+                </tr>
+                <!-- segunda linea -->
+                <tr>
+                    <td>9:00-10:00</td>
+                    <td>Geogradia</td>
+                    <td rowspan="2">Biologia</td>
+                    <td>Arte</td>
+                </tr>
+                <!-- tercera linea -->
+                <tr>
+                    <td>10:00-11:00</td>
+                    <td colspan="2">Actividades extra escolares </td>
+                    <td>Matematicas</td>
+                    <td>Historias</td>
+                </tr>
+                <tr>
+                    <td>11:00-12:00</td>
+                    <td colspan="5">Recreo</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

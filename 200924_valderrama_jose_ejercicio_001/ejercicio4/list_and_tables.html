@@ -22,51 +22,5 @@
     <div id="tablesContainer">
     </div>
 </body>
-<script>
-    // arr de datos de contacto de cada usuario 
-    const table1 = {
-        head: ["nombre", "correo", "telefono"],
-        body: [{
-            nombre: "Juan",
-            email: "juan@gmail.com",
-            telefono: "1211232453"
-        },
-        {
-            nombre: "Pepe",
-            email: "Pepe@gmail.com",
-            telefono: "1213242453"
-        },
-        {
-            nombre: "Jose",
-            email: "jose@gmail.com",
-            telefono: "1211232453"
-        },]
-    }
-
-    const incluirHead = (table, datos) => {
-        let createHead = document.createElement("thead")
-        let createTr = document.createElement("tr")
-        for (let head of datos.head) {
-            let createTh = document.createElement("th")
-            createTh.textContent = head
-            createTr.appendChild(createTh)
-        }
-        createHead.appendChild(createTr)
-        return createHead
-    }
-
-    // Aqui agregamos dinamicamente a cada usuario 
-    const createTable = (datos) => {
-        const body = document.getElementById("tablesContainer")
-        let createTable = document.createElement("table")
-        let head = incluirHead(createTable, datos)
-        createTable.appendChild(head)
-        body.appendChild(createTable)
-    }
-
-    createTable(table1)
-    createTable(table1)
-
-</script>
 
 </html>
