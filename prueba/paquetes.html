@@ -1,72 +1,159 @@
 <!DOCTYPE html>
 
-<html
-  lang="es"
-  style="
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-      'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  "
->
+<html lang="es" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
   <head>
     <title>Video y audio en HTML5</title>
     <meta chartset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
-  <body style="background-color: black; color: white">
+  <body style="background-color: rgb(255, 255, 255); color: #1c1c1c;">
     <header></header>
-    <div aling="">
+    <div style="display: flex; align-items: center; flex-direction: column; max-width: 90%; margin: auto;">
       <div
         style="
-          background-image: url(utils/img/playaBg.jpg);
-          width: 80%;
-          height: 200px;
+          background-image: url(utils/img/island.jpeg);
+          width: 100%;
+          height: 250px;
           background-size: cover;
-          border-radius: 20px;
+          border-radius: 10px;
+          margin-bottom: -120px;
+          display: flex;
         "
       >
-        <h1 style="font-size: 50px">Busca y reserva tu pagina</h1>
+        <h1 style="font-size: 60px; color:white; margin-left: 5%;">Busca y reserva tu viaje</h1>
       </div>
-      <table style="background-color: #ffffff; color: black; width: 60%">
-        <tr>
-          <td style="padding: 15px; border: 1px solid gainsboro">
+      <table style="padding: 30px; color: black; background-color: white; width: 90%; margin: auto; ; border-radius: 10px; box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.39);">
+        <tr >
+          <td style="padding: 15px; border: 1px solid gainsboro;">
             Vuelo & Hotel
           </td>
           <td>Vuelos</td>
           <td>Hoteles</td>
           <td>Crucero</td>
         </tr>
-        <tr>
-          <td colspan="4">
-            <form action="" style="display: flex">
-              <div>
-                <label for="origen">Origen</label>
-                <br />
-                <input type="text" id="origen" />
-              </div>
-              <div>
-                <label for="destino">Destino</label>
-                <br />
-                <input type="text" id="Destino" />
-              </div>
-              <div>
-                <label for="fecha_de_viaje">Fecha de viaje</label>
-                <br />
-                <input type="text" id="Fecha_de_viaje" />
-              </div>
-              <button></button>
+        <tr >
+          <td colspan="4" align="center" >
+            <form action="" style=" width: 100%; display: flex;">
+                <!-- <label for="origen" style="min-width: 250px">Origen</label>
+                <label for="destino" style="width: 250px;">Destino</label>
+                <label for="fecha_de_viaje" style="width: 250px;">Fecha de viaje</label>
+                <br /> -->
+                <input type="text" id="origen" placeholder="Ciudad o aeropuerto?" style="padding: 10px 30px 10px 10px; width: 100%; border: 1px solid rgb(181, 181, 181); border-radius: 5px; font-size: 15px; margin: 0 3px;"/>
+                <input type="text" id="destino" placeholder="A donde quieres ir?" style="padding: 10px 30px 10px 10px ; border: 1px solid rgb(181, 181, 181); border-radius: 5px; font-size: 15px; margin: 0 3px;" />
+                <input type="text" id="fecha_de_viaje" placeholder="Fecha de ida?" style="padding: 10px 30px 10px 10px  ; border: 1px solid rgb(181, 181, 181); border-radius: 5px; font-size: 15px; margin: 0 3px;" />
+              <button style="background-color: rgb(106, 52, 96); border: none; border-radius: 5px; font-weight: bold; padding: 11px 30px; font-size: 15px; color: white; ">Buscar</button>
             </form>
           </td>
         </tr>
       </table>
-      <table style="padding: 20px;">
+      <table style="padding: 20px; color: black; width: 100%">
         <tbody>
           <tr>
-            <td style="max-width: 300px; background-color: white; padding: 10px;">
-              <img src="utils/img/japon.jpg" alt="japon" style="width: 100%; border-radius: 20px;" />
-              <br>
-              <span>Detino</span>
-              <p>
+            <td
+              style="max-width: 250px; background-color: white; padding: 10px"
+            >
+              <img
+                src="utils/img/japon.jpg"
+                alt="japon"
+                style="
+                  max-width: 100%;
+                  height: 180px;
+                  object-fit: cover;
+                  border-radius: 20px;
+                "
+              />
+              <p style="font-family: sans-seri; font-size: 12px; margin: 8px 0">
+                <img
+                  width="20"
+                  src="utils/icons/travel-bag.png"
+                  style="margin-bottom: -3px"
+                  alt="travel"
+                />
+                <span>DESTINOS</span>
+              </p>
+              <p style="font-weight: bold; margin-top: 0px">
+                Vacaciones en Japon: Disfruta de su extraordinaria cultura y
+                comida
+              </p>
+            </td>
+            <td
+              style="max-width: 250px; background-color: white; padding: 10px"
+            >
+              <img
+                src="utils/img/mallorca.jpg"
+                alt="japon"
+                style="
+                  max-width: 100%;
+                  height: 180px;
+                  object-fit: cover;
+                  border-radius: 20px;
+                "
+              />
+              <p style="font-family: sans-seri; font-size: 12px; margin: 8px 0">
+                <img
+                  width="20"
+                  src="utils/icons/travel-bag.png"
+                  style="margin-bottom: -3px"
+                  alt="travel"
+                />
+                <span>DESTINOS</span>
+              </p>
+              <p style="font-weight: bold; margin-top: 0px">
+                Vacaciones en Japon: Disfruta de su extraordinaria cultura y
+                comida
+              </p>
+            </td>
+            <td
+              style="max-width: 250px; background-color: white; padding: 10px"
+            >
+              <img
+                src="utils/img/punta_cana.jpg"
+                alt="japon"
+                style="
+                  max-width: 100%;
+                  height: 180px;
+                  object-fit: cover;
+                  border-radius: 20px;
+                "
+              />
+              <p style="font-family: sans-seri; font-size: 12px; margin: 8px 0">
+                <img
+                  width="20"
+                  src="utils/icons/travel-bag.png"
+                  style="margin-bottom: -3px"
+                  alt="travel"
+                />
+                <span>DESTINOS</span>
+              </p>
+              <p style="font-weight: bold; margin-top: 0px">
+                Vacaciones en Japon: Disfruta de su extraordinaria cultura y
+                comida
+              </p>
+            </td>
+            <td
+              style="max-width: 250px; background-color: white; padding: 10px"
+            >
+              <img
+                src="utils/img/escocia.jpeg"
+                alt="japon"
+                style="
+                  max-width: 100%;
+                  height: 180px;
+                  object-fit: cover;
+                  border-radius: 20px;
+                "
+              />
+              <p style="font-family: sans-seri; font-size: 12px; margin: 8px 0">
+                <img
+                  width="20"
+                  src="utils/icons/travel-bag.png"
+                  style="margin-bottom: -3px"
+                  alt="travel"
+                />
+                <span>DESTINOS</span>
+              </p>
+              <p style="font-weight: bold; margin-top: 0px">
                 Vacaciones en Japon: Disfruta de su extraordinaria cultura y
                 comida
               </p>
