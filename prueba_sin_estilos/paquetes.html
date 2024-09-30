@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="es" style="
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  ">
+
+<head>
+  <title>Paquetes y viajes turisticos</title>
+  <meta chartset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="utils/icons/travelWorldIcon.ico" type="imagen/x-icon">
+</head>
+
+<body style="background-color: rgb(255, 255, 255); color: #1c1c1c; margin: 0px">
+  <!-- El header es el mismo que el del index, pueden buscar su descripcion ahi :) -->
+
+  <header>
+    <table width="100%" style="padding: 0 40px">
+      <tbody>
+        <tr>
+          <td width="50%">
+            <img src="utils/img/logo.png" width="180px" alt="Logo Travel World" />
+          </td>
+          <td>
+            <nav style="
+                  display: flex;
+                  justify-content: space-around;
+                  font-size: 18px;
+                ">
+              <a href="index.html" style="text-decoration: none; color: rgba(0, 0, 0, 0.683)">Inicio</a>
+              <a href="destinations_page.html" style="text-decoration: none; color: rgba(0, 0, 0, 0.683)">Destinos</a>
+              <a href="actividades.html" style="text-decoration: none; color: rgba(0, 0, 0, 0.683)">Actividades</a>
+              <a href="contact_form_page.html" style="text-decoration: none; color: rgba(0, 0, 0, 0.683)">Contacto</a>
+            </nav>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </header>
+
+  <!-- Este div contiene una imagen con un texto llamando a la accion -->
+
+  <div style="
+        background-image: url(utils/img/island.jpeg);
+        width: 100%;
+        height: 250px;
+        background-size: cover;
+        border-radius: 10px;
+        margin-bottom: -120px;
+        display: flex;
+      ">
+    <h1 style="font-size: 60px; color: white; margin-left: 5%">
+      Busca y reserva tu viaje
+    </h1>
+  </div>
+
+  <!-- Esta tabla contiene opciones y un formulario para buscar viajes 
+         el fomulario esta sobrepuesto a la imagen anterior-->
+
+  <table style="
+        padding: 30px;
+        color: black;
+        background-color: white;
+        width: 90%;
+        margin: auto;
+        border-radius: 10px;
+        box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.39);
+      ">
+    <tr>
+      <!-- td con opciones para viajes -->
+
+      <td style="padding: 15px 0">
+        <span style="
+              color: #373737;
+              padding: 10px;
+              border: 1px solid rgba(237, 230, 236);
+              border-radius: 5px;
+              margin: 0 3px;
+            ">Vuelo & Hotel</span>
+        <span style="
+              color: #373737;
+              padding: 10px;
+              border: 1px solid rgba(237, 230, 236);
+              border-radius: 5px;
+              margin: 0 3px;
+            ">Vuelos</span>
+        <span style="
+              color: #373737;
+              padding: 10px;
+              border: 1px solid rgba(237, 230, 236);
+              border-radius: 5px;
+              margin: 0 3px;
+            ">Hoteles</span>
+        <span style="
+              color: #373737;
+              padding: 10px;
+              border: 1px solid rgba(237, 230, 236);
+              border-radius: 5px;
+              margin: 0 3px;
+            ">Crucero</span>
+      </td>
+    </tr>
+    <tr>
+      <!-- td con formulario para buscar viajes -->
+
+      <td colspan="4" align="center">
+        <form action="" style="width: 100%; display: flex">
+          <!-- <label for="origen" style="min-width: 250px">Origen</label>
+                <label for="destino" style="width: 250px;">Destino</label>
+                <label for="fecha_de_viaje" style="width: 250px;">Fecha de viaje</label>
+                <br /> -->
+          <input type="text" id="origen" placeholder="Ciudad o aeropuerto?" style="
+                padding: 10px 30px 10px 10px;
+                width: 100%;
+                border: 1px solid rgb(181, 181, 181);
+                border-radius: 5px;
+                font-size: 15px;
+                margin: 0 3px;
+              " />
+          <input type="text" id="destino" placeholder="A donde quieres ir?" style="
+                padding: 10px 30px 10px 10px;
+                border: 1px solid rgb(181, 181, 181);
+                border-radius: 5px;
+                font-size: 15px;
+                margin: 0 3px;
+              " />
+          <input type="text" id="fecha_de_viaje" placeholder="Fecha de ida?" style="
+                padding: 10px 30px 10px 10px;
+                border: 1px solid rgb(181, 181, 181);
+                border-radius: 5px;
+                font-size: 15px;
+                margin: 0 3px;
+              " />
+          <button style="
+                background-color: rgb(106, 52, 96);
+                border: none;
+                border-radius: 5px;
+                font-weight: bold;
+                padding: 11px 30px;
+                font-size: 15px;
+                color: white;
+              ">
+            Buscar
+          </button>
+        </form>
+      </td>
+    </tr>
+  </table>
+
+  <!-- En esta tabla tenemos cartas con las diferentes opciones disponibles,
+           cada carta contiene una imagen del destino y una breve descripcion -->
+
+  <table align="center" style="padding: 20px; color: black; width: 90%">
+    <tbody>
+      <tr>
+        <!-- td con informacion del viaje -->
+        <td style="max-width: 250px; padding: 10px">
+          <img src="utils/img/japon.jpg" alt="japon" style="
+                max-width: 100%;
+                height: 180px;
+                object-fit: cover;
+                border-radius: 20px;
+              " />
+          <p style="font-family: sans-seri; font-size: 12px; margin: 8px 0">
+            <img width="20" src="utils/icons/travel-bag.png" style="margin-bottom: -3px" alt="travel" />
+            <span>DESTINOS</span>
+          </p>
+          <p style="font-weight: bold; margin-top: 0px">
+            Vacaciones en Japon: Disfruta de su extraordinaria cultura y
+            comida
+          </p>
+        </td>
+        <td style="max-width: 250px; padding: 10px">
+          <img src="utils/img/mallorca.jpg" alt="japon" style="
+                max-width: 100%;
+                height: 180px;
+                object-fit: cover;
+                border-radius: 20px;
+              " />
+          <p style="font-family: sans-seri; font-size: 12px; margin: 8px 0">
+            <img width="20" src="utils/icons/travel-bag.png" style="margin-bottom: -3px" alt="travel" />
+            <span>DESTINOS</span>
+          </p>
+          <p style="font-weight: bold; margin-top: 0px">
+            Vacaciones en Japon: Disfruta de su extraordinaria cultura y
+            comida
+          </p>
+        </td>
+        <td style="max-width: 250px; padding: 10px">
+          <img src="utils/img/punta_cana.jpg" alt="japon" style="
+                max-width: 100%;
+                height: 180px;
+                object-fit: cover;
+                border-radius: 20px;
+              " />
+          <p style="font-family: sans-seri; font-size: 12px; margin: 8px 0">
+            <img width="20" src="utils/icons/travel-bag.png" style="margin-bottom: -3px" alt="travel" />
+            <span>DESTINOS</span>
+          </p>
+          <p style="font-weight: bold; margin-top: 0px">
+            Vacaciones en Japon: Disfruta de su extraordinaria cultura y
+            comida
+          </p>
+        </td>
+        <td style="max-width: 250px; padding: 10px">
+          <img src="utils/img/escocia.jpeg" alt="japon" style="
+                max-width: 100%;
+                height: 180px;
+                object-fit: cover;
+                border-radius: 20px;
+              " />
+          <p style="font-family: sans-seri; font-size: 12px; margin: 8px 0">
+            <img width="20" src="utils/icons/travel-bag.png" style="margin-bottom: -3px" alt="travel" />
+            <span>DESTINOS</span>
+          </p>
+          <p style="font-weight: bold; margin-top: 0px">
+            Vacaciones en Japon: Disfruta de su extraordinaria cultura y
+            comida
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- El footer es el mismo que el del index, pueden buscar su descripcion ahi :) -->
+
+  <footer style="text-align: center">
+    <div style="display: flex; justify-content: space-around; padding-top: 30px">
+      <div style="max-width: 200px">
+        <img src="utils/img/logo.png" width="200px" alt="Logo Travel World" />
+        <p>
+          Disfruta, descubre y experimenta la nueva forma de encontrar tus
+          proximas vacaciones
+        </p>
+      </div>
+      <table style="width: 50%; padding-top: 20px">
+        <thead>
+          <tr>
+            <th>Explorar</th>
+            <th>Visitanos</th>
+            <th>Redes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="4">
+              <ul style="list-style: none; padding-left: 0">
+                <li>Destinos</li>
+                <li>Buscar Viaje</li>
+                <li>Contacto</li>
+                <li>Sobre Nosotros</li>
+              </ul>
+            </td>
+            <td rowspan="4">
+              <p>
+                R. do Brasil, <br />
+                52Santiago de Vigo, <br />
+                36204 Vigo, <br />
+                Pontevedra
+              </p>
+            </td>
+            <td rowspan="4">
+              <ul style="list-style: none; padding-left: 0">
+                <li>Instagram</li>
+                <li>Facebook</li>
+                <li>X</li>
+                <li>preubas</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>&reg; 2020, Todos los derechos reservados</p>
+  </footer>
+</body>
+
+</html>
