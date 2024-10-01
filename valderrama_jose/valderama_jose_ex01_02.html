@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+  <title>Paquetes y viajes turisticos</title>
+  <meta chartset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="utils/icons/travelWorldIcon.ico" type="imagen/x-icon">
+  <meta name="author" content="ValderramaDev">
+  <meta name="description" content="Destinos turistico, viajes, vuelos y paquetes de Travel World">
+</head>
+
+<body style="color: #1c1c1c; margin: 0px">
+  <!-- El header es el mismo que el del index, pueden buscar su descripcion ahi :) -->
+
+  <header>
+    <!-- En nuestra cabecera tenemos una barra una barra de navegacion 
+     que esta organizada por dentro con una tabla -->
+    <nav style="font-size: 18px; padding: 0 40px">
+      <table width="100%">
+        <tbody>
+          <tr>
+            <td width="50%">
+              <img src="img/logo.png" width="180px" alt="Logo Travel World" />
+            </td>
+            <td>
+              <a href="valderama_jose_ex01_01.html">Destinos</a>
+            </td>
+            <td>
+              <a href="index.html">index</a>
+            </td>
+            <td>
+              <a href="valderama_jose_ex01_03.html">Actividades</a>
+            </td>
+            <td>
+              <a href="valderrama_jose_ex01_contacto.html">Contacto</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </nav>
+
+  </header>
+
+  <!-- Este div contiene una imagen con un texto llamando a la accion -->
+
+  <table width="100%">
+    <tbody>
+      <tr align="center">
+        <td style="background-image: url(img/island.jpeg);">
+          <h1 style="font-size: 60px; color: white; padding: 20px 0">
+            Busca y reserva tu viaje
+          </h1>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <!-- Esta tabla contiene opciones y un formulario para buscar viajes 
+         el fomulario esta sobrepuesto a la imagen anterior-->
+          <table
+            style=" padding: 30px; color: black; background-color: white; width: 90%; margin: auto; border-radius: 10px; box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.39);">
+            <tr>
+              <!-- td con opciones para viajes -->
+
+              <td style="padding: 15px 0" align="center">
+                <span style=" padding: 10px; border: 1px solid #ede6ec; border-radius: 5px; margin: 0 3px;">Vuelo y
+                  Hotel</span>
+                <span
+                  style=" padding: 10px; border: 1px solid #ede6ec; border-radius: 5px; margin: 0 3px;">Vuelos</span>
+                <span
+                  style=" padding: 10px; border: 1px solid #ede6ec; border-radius: 5px; margin: 0 3px;">Hoteles</span>
+                <span
+                  style=" padding: 10px; border: 1px solid #ede6ec; border-radius: 5px; margin: 0 3px;">Crucero</span>
+              </td>
+            </tr>
+            <tr>
+              <!-- td con formulario para buscar viajes -->
+              <td colspan="4" align="center">
+                <form style="width: 100%;">
+                  <input type="text" id="origen" placeholder="Ciudad o aeropuerto?"
+                    style="padding: 10px; border: 1px solid rgb(181, 181, 181); border-radius: 5px; font-size: 15px; margin: 0 3px;" />
+                  <input type="text" id="destino" placeholder="A donde quieres ir?"
+                    style="padding: 10px; border: 1px solid rgb(181, 181, 181); border-radius: 5px;font-size: 15px;margin: 0 3px;" />
+                  <input type="text" id="fecha_de_viaje" placeholder="Fecha de ida?"
+                    style="padding: 10px; border: 1px solid rgb(181, 181, 181); border-radius: 5px; font-size: 15px; margin: 0 3px;" />
+                  <button
+                    style="background-color: rgb(106, 52, 96); border: none; border-radius: 5px; padding: 11px 30px; font-size: 15px; color: white; ">
+                    <b>Buscar</b>
+                  </button>
+                </form>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- En esta tabla tenemos cartas con las diferentes opciones disponibles,
+           cada carta contiene una imagen del destino y una breve descripcion -->
+
+  <table align="center" style="padding: 20px; color: black; width: 90%">
+    <tbody>
+      <tr>
+        <!-- td con informacion del viaje -->
+        <td style="padding: 10px" align="center">
+          <img src="img/japon.jpg" alt="imagen de Japon" width="250px" style="border-radius: 20px;" />
+          <p>
+            <img width="20" src="utils/icons/travel-bag.png" alt="travel" />
+            <span>DESTINOS</span>
+          </p>
+          <p>
+            <b>
+              Vacaciones en Japon: Disfruta de su
+              <br>
+              extraordinaria cultura y comida
+            </b>
+          </p>
+        </td>
+        <td style="padding: 10px" align="center">
+          <img src="img/mallorca.jpg" alt="Imagen de Mallorca" width="250px" style="border-radius: 20px;" />
+          <p>
+            <img width="20" src="utils/icons/travel-bag.png" alt="travel" />
+            <span>DESTINOS</span>
+          </p>
+          <p>
+            <b>
+              Vacaciones en Japon: Disfruta de
+              <br>
+              su extraordinaria cultura y comida
+            </b>
+          </p>
+        </td>
+        <td style="padding: 10px" align="center">
+          <img src="img/punta_cana.jpg" alt="imagen de Punta Cana" width="250px" style="border-radius: 20px;" />
+          <p>
+            <img width="20" src="utils/icons/travel-bag.png" alt="travel" />
+            <span>DESTINOS</span>
+          </p>
+          <p>
+            <b>
+              Vacaciones en Japon: Disfruta de su
+              <br>
+              extraordinaria cultura y comida
+            </b>
+          </p>
+        </td>
+        <td style="padding: 10px" align="center">
+          <img src="img/escocia.jpeg" alt="imagen de Escocia" width="250px" style="border-radius: 20px;" />
+
+          <p>
+            <img width="20" src="utils/icons/travel-bag.png" alt="travel" />
+            <span>DESTINOS</span>
+          </p>
+          <p>
+            <b>
+              Vacaciones en Japon: Disfruta de su <br>
+              extraordinaria cultura y comida
+            </b>
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- El footer es el mismo que el del index, pueden buscar su descripcion ahi :) -->
+
+  <footer>
+    <table align="center" width="100%" cellpadding="30">
+      <tbody>
+        <tr>
+          <td width="30%" align="center">
+            <img src="img/logo.png" width="200px" alt="Logo Travel World" />
+            <p width="200px">
+              Disfruta, descubre y experimenta la nueva forma de encontrar tus
+              proximas vacaciones
+            </p>
+          </td>
+          <td>
+            <table width="100%">
+              <thead>
+                <tr>
+                  <th>Explorar</th>
+                  <th>Visitanos</th>
+                  <th>Redes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="4" align="center">
+                    <ul style="list-style: none; padding-left: 0">
+                      <li>Destinos</li>
+                      <li>Buscar Viaje</li>
+                      <li>Contacto</li>
+                      <li>Sobre Nosotros</li>
+                    </ul>
+                  </td>
+                  <td rowspan="4" align="center">
+                    <p>
+                      R. do Brasil, <br />
+                      52Santiago de Vigo, <br />
+                      36204 Vigo, <br />
+                      Pontevedra
+                    </p>
+                  </td>
+                  <td rowspan="4" align="center">
+                    <ul style="list-style: none; padding-left: 0">
+                      <li>Instagram</li>
+                      <li>Facebook</li>
+                      <li>X</li>
+                      <li>preubas</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <p>&reg; 2024, Todos los derechos reservados</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </footer>
+</body>
+
+</html>
