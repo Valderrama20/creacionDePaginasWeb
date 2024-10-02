@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla</title>
+    <!-- estilos de la pagina -->
+    <style>
+        /* Selectores universales 
+        * {
+            color: aquamarine;
+        }
+        */
+        
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* estos son selectores */
+        h1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        /* estos son selectores de tipo E*/
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #11b3fe;
+        }
+
+        img {
+            border: 2px solid #11b3fe;
+            border-radius: 10px;
+            width: 500px;
+        }
+
+        /* Selector de hijos E>F */
+
+        div>h1 {
+            color: rgb(160, 59, 254);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        div>p {
+            color: blue;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        /* finde selector de hijos E>F */
+
+        /* selector dependiente */
+        div {
+            border: rgb(40, 144, 235) 1px solid;
+        }
+
+        /* clases */
+        .cabecera h1 {
+            color: antiquewhite;
+        }
+
+        .seccion h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #11b3fe;
+        }
+
+        .articulo h1 {
+            color: rgb(211, 15, 57);
+        }
+
+        .top_links li {
+            display: inline;
+        }
+
+        .estrella {
+            color: aquamarine;
+            font-size: 50px;
+            margin: 0px;
+        }
+
+        li a {
+            display: block;
+        }
+
+        a:hover {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="cabecera">
+        <div>
+            <h1>Esto es el header</h1>
+        </div>
+        <div>
+            <nav class="top_links">
+                <ul>
+                    <li><a href="#">link 1</a></li>
+                    <li><a href="#">link 2</a></li>
+                    <li><a href="#">link 3</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="seccion">
+        <div>
+            <h1>esta es la seccion 1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis nostrum delectus similique voluptatum
+                saepe
+                quia earum blanditiis neque, at inventore nemo exercitationem debitis qui itaque alias repellat dolor
+                totam
+                autem.</p>
+            <ul>
+                <li>uno</li>
+                <li>dos</li>
+                <li>tres</li>
+            </ul>
+        </div>
+        <div>
+            <h1>esta es la seccion 2</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis nostrum delectus similique voluptatum
+                saepe
+                quia earum blanditiis neque, at inventore nemo exercitationem debitis qui itaque alias repellat dolor
+                totam
+                autem.</p>
+            <p class="estrella">&bigstar;</p>
+        </div>
+    </section>
+    <aside>
+        <article class="articulo">
+            <h1>Esto es el articulo</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, aspernatur? Reprehenderit consequatur
+                magnam aliquam repudiandae, natus necessitatibus debitis, atque laudantium deleniti perferendis laborum
+                iure! Optio numquam nobis consequuntur deserunt harum.</p>
+            <img src="img/paracaidas.png" alt="">
+        </article>
+        <article>ss</article>
+    </aside>
+
+    <footer>
+        <h1>Esto es el footer</h1>2024 <a href="">Esto es un vinculo</a>
+    </footer>
+</body>
+
+</html>

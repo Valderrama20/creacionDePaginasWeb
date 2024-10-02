@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+    sans-serif;
+  background-color: black;
+  color: white;
+}
+
+/* Estilos del header */
+
+.principal_header {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+.principal_header nav li {
+  display: inline;
+}
+.principal_header nav ul li a {
+  text-decoration: none;
+}
