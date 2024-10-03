@@ -1,0 +1,67 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+/* Estilizar con un selector general */
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* Estilizar todos los parrafos de la pagina */
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* estilizar los encabezados denntro del contenido principal de la pagina */
+
+main h1,
+main h2 {
+  color: rgb(136, 0, 255);
+}
+
+main h2 {
+  color: aqua;
+}
+
+/* Estilizar todos los enlaces */
+
+a {
+  text-decoration: none;
+  color: blueviolet;
+}
+
+/* Estilizar la lista no ordenada del div */
+/* Las id se identifican con el simbolo # y solo puede existir uno */
+
+#lista ul {
+  list-style: square;
+}
+
+/* Estilizar los elementos li dentro de la lista con la clase destacados */
+/* Las clases se identifican con un punto antes de la palabra */
+
+.destacados li {
+  font-weight: bold;
+}
+
+/* Estilizar el elemento button */
+/* El padding si tiene cuatro elementos su aplicaccion sera en el ordel de las agujas del reloj  */
+
+button {
+  background-color: rgb(75, 6, 140);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateX(100px);
+}

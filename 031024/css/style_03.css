@@ -1,0 +1,42 @@
+/* otra forma importar los estilos */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Sixtyfour+Convergence&display=swap");
+
+* {
+  font-family: "Sixtyfour Convergence", sans-serif;
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.844);
+}
+
+body {
+  background-color: black;
+}
+p {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid rgba(255, 0, 0, 0.573);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.accion-contenedor {
+  /* Agregar una img y un degradado */
+  background-image: linear-gradient(#000000e4, #00000055),
+    url("https://th.bing.com/th/id/R.d9a3ff6a7527e17275de7931f2ca45e1?rik=UvuYDRAoAyf5aQ&pid=ImgRaw&r=0");
+  /* ajustar la imagen al contenedor */
+  background-size: cover;
+  /* centra la imagen en el contenedor */
+  background-position: center;
+  /* Para que no se repita la img */
+  background-repeat: no-repeat;
+  /* Fondo desplazado con el contenido */
+  background-attachment: scroll;
+  /* alinacion del contenido al centro */
+  text-align: center;
+  /* relleno */
+  padding: 60px;
+  /*  */
+}

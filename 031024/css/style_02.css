@@ -1,0 +1,42 @@
+body {
+  background-color: black;
+  color: rgba(255, 255, 255, 0.766);
+}
+
+/* El selector despues del mas cambia las propiedades de la etiqueta siguiente */
+p + p {
+  color: rgb(43, 137, 226);
+}
+
+h1,
+h2 {
+  color: rgb(132, 0, 255);
+}
+
+em {
+  color: blueviolet;
+}
+
+.text-indent {
+  text-indent: 30px;
+}
+
+.text-aling {
+  text-align: right;
+}
+
+.text-decoration {
+  text-decoration: line-through;
+}
+
+.word-spacing {
+  word-spacing: 15px;
+}
+
+.letter-spacing {
+  letter-spacing: 10px;
+}
+
+.text-transfrom {
+  text-transform: uppercase;
+}
