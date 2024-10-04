@@ -1,0 +1,32 @@
+/* * {
+  margin: 0;
+} */
+
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  padding: 30px;
+  border-bottom: 1px solid purple;
+}
+
+#galeria {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#galeria img {
+  float: left;
+  padding: 10px;
+}
+
+img {
+  max-width: 200px;
+}
+ 
+h2{
+    clear: both;
+}
