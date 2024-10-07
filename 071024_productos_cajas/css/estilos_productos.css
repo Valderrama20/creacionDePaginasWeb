@@ -1,0 +1,93 @@
+/* importacion de tipografia */
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&display=swap");
+
+body {
+  background-color: black;
+  color: rgba(255, 255, 255, 0.748);
+}
+
+/* Estilos generales */
+
+* {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+}
+
+/* Estilos a la tabla */
+
+.style_table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 20px auto;
+  caption-side: bottom;
+  /* border: 1px solid rgb(93, 0, 255); */
+}
+
+.style_table caption {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.style_table th,
+.style_table td {
+  padding: 10px;
+  border: 1px solid white;
+}
+
+.style_table th {
+  color: rgb(145, 255, 0);
+}
+
+/* odd le da estilos a todos los elementos
+impares de la tabla */
+.style_table tbody tr:nth-child(odd) {
+  color: rgb(0, 255, 255);
+}
+
+/* even le da estilos a todos los elementos
+pares de la tabla */
+.style_table tbody tr:nth-child(even) {
+  color: rgb(123, 0, 255);
+}
+
+/* Aplica estilos al pasar por arriba de la fila */
+.style_table tbody tr:hover {
+  color: white;
+}
+
+/* Al elemento con esta clase, dentro de 
+su tbody, dentro de su tr, en el tercer hijo "td"
+aplicarle el elmento siguiente */
+
+.style_table tbody tr td:nth-child(3)::after {
+  content: " €";
+}
+
+/* lo mismo pero al principio */
+
+.style_table tbody tr td:nth-child(3)::before {
+  content: "antes ";
+}
+
+/* ESTILOS PARA LOS DATOS DEL LIBRO */
+
+h1.libro {
+  border-bottom: 1px solid yellow;
+}
+
+h2 {
+  border: 2px solid gray;
+}
+
+#datos {
+  border-top: 4px dotted yellow;
+  border-bottom: 4px dotted yellow;
+  list-style: none;
+  padding: 10px 0;
+}
+
+#contenido {
+  border: 2px dashed blue;
+  padding: 10px;
+  list-style: none;
+}
