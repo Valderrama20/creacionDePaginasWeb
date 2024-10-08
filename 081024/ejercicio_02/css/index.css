@@ -1,0 +1,62 @@
+/* Reset basico */
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+iframe {
+  width: 100%;
+  /* Los contenidos del ifram se colocan en bloque */
+  display: block;
+}
+
+.iframe-header {
+  height: 90px;
+}
+
+.iframe-nav {
+  background-color: chartreuse;
+}
+
+.iframe-nav body nav ul {
+  height: 50px;
+  background-color: chartreuse;
+  list-style: no;
+}
+
+.iframe-main {
+  height: 500px;
+}
+
+.iframe-footer {
+  height: 100px;
+  background-color: cyan;
+
+  /* Position del footer con respecto a la pantalla */
+  position: relative;
+  bottom: 0;
+}
+
+/* ------- Estilos de la pagina nav --------- */
+
+.nav-superior ul {
+  list-style: none;
+}
+
+.nav-superior ul li {
+  display: inline;
+  padding: 0 20px;
+}
+
+.nav-superior ul li a {
+  text-decoration: none;
+  color: aqua;
+  font-size: 20px;
+}

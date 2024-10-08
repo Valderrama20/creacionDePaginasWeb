@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<style>
+    body {
+        background-color: black;
+        color: white;
+        margin: 0;
+        /* disposision de la pantalla flexible */
+        display: flex;
+        /* Flexibilidad en funcion de la columna */
+        flex-direction: column;
+        /* Se adapte a la altura minima */
+        min-height: 100vh;
+    }
+
+    /* Tamaños especificos para cada iframe */
+
+    #header {
+        background-color: aqua;
+
+
+    }
+
+    #main {
+        height: 500px;
+        flex-grow: 1;
+        /* este atributo hace que mi conteneder ocupe todo el espacio disponible */
+    }
+
+    #footer {
+        height: 100px;
+        border: 1px solid greenyellow;
+
+    }
+
+    /* Medidas de las paginas */
+    iframe {
+        width: 100%;
+        border: none;
+    }
+</style>
+
+<body>
+    <!-- Header indexado -->
+    <iframe id="header" src="header.html" frameborder="0"></iframe>
+    <iframe id="main" src="main.html" frameborder="0"></iframe>
+    <iframe id="footer" src="footer.html" frameborder="0"></iframe>
+    <a href="productos.html">Productos</a>
+
+</body>
+
+</html>
