@@ -1,0 +1,114 @@
+@font-face {
+  font-family: google-font;
+  src: url(/asets/fuentes2/ProductSans-Regular.ttf);
+}
+
+* {
+  font-family: "google-font", sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilos del titulo */
+
+.title {
+  font-size: 100px;
+  min-width: 360px;
+  margin-bottom: 20px;
+}
+
+.title span {
+  margin: 0 -7px;
+}
+
+/* Colores de la letras del logo */
+
+.title span:nth-child(1) {
+  color: rgb(66, 133, 244);
+}
+
+.title span:nth-child(2) {
+  color: rgb(219, 68, 55);
+}
+
+.title span:nth-child(3) {
+  color: rgb(244, 180, 0);
+}
+
+.title span:nth-child(4) {
+  color: rgb(66, 133, 244);
+}
+
+.title span:nth-child(5) {
+  color: rgb(15, 157, 88);
+}
+
+.title span:nth-child(6) {
+  color: rgb(219, 68, 55);
+}
+
+/* estilos del input */
+
+.google-search-input {
+  display: flex;
+  border: 2px solid rgba(0, 0, 0, 0.23);
+  padding: 10px;
+  border-radius: 30px;
+  width: 90%;
+  min-width: 400px;
+  max-width: 700px;
+}
+
+.google-search-input input {
+  color: rgba(128, 128, 128, 0.776);
+  font-size: 20px;
+}
+
+.google-search-input input:focus {
+  outline: none;
+}
+
+.google-search-input input::placeholder {
+  color: rgba(128, 128, 128, 0.697);
+  font-size: 20px;
+}
+
+.google-search-input img {
+  width: 25px;
+  height: 25px;
+  margin: 0 10px;
+}
+
+.google-search-input input {
+  border: none;
+  width: 100%;
+}
+
+/* Estilos del footer */
+
+footer div:first-child {
+  border-bottom: 1px solid black;
+}
+
+footer div:nth-child(2) {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+footer div:last-child ul {
+  text-align: center;
+  list-style: none;
+}
+
+footer div:last-child ul li {
+  display: inline;
+  padding: 15px;
+}
+footer div:last-child ul li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
