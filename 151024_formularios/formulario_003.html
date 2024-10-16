@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 003</title>
+    <link rel="stylesheet" href="css/formulario_003.css">
+</head>
+
+<body>
+    <div class="form-003">
+        <!-- Primera palabra en minuscula y la segunda palabra 
+         con la primera letra en mayuscula 
+         camellCase
+         -->
+        <form id="registerForm" class="form">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="name" placeholder="Tu email" required>
+
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" placeholder="Contraseña" required>
+
+            <input type="submit" value="Registrarse">
+        </form>
+    </div>
+</body>
+<script>
+    //  Nombre del documento 
+    const form = document.getElementById("registerForm")
+    console.log(form)
+    form.addEventListener("submit", (event) => {
+        // variables
+        let name = document.getElementById("name").value
+        let email = document.getElementById("email").value
+        let password = document.getElementById("password").value
+
+        // Validar que el nombre tenga al menos tres caracteres
+        if (name.length < 3) {
+            alert("El nombre tiene tener minimo tres caracteres")
+            event.preventDefault()
+            return
+        }
+
+        // Validar el email que tenga un "@" y un "."
+
+        // Validar que la password contenga 9 digitos
+    })
+</script>
+
+</html>

@@ -1,0 +1,105 @@
+* {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* Estilo basico del cuerpo */
+
+body {
+}
+
+/* Titulo del formulario */
+h2 {
+  text-align: center;
+  font-size: 30px;
+  text-decoration: underline;
+  color: rgb(63, 101, 135);
+}
+
+/* Estilos del Contenedor */
+
+.form-container {
+  max-width: 500px;
+  box-shadow: 2px 5px 10px rgb(179, 179, 179);
+  border-radius: 10px;
+  margin: auto;
+}
+
+/* Estilos del formulario */
+
+.form-container form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Estilos para las etiquetas y campos */
+
+label {
+  color: rgb(63, 101, 135);
+}
+
+/* Introducir el atributo en corchetes para seleccionarlos */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  margin: 5px 0;
+  border: none;
+  background-color: aliceblue;
+}
+
+/* Grupo de botones radios y checkbox */
+
+.radio-group,
+.checkbox-group {
+  display: flex;
+  justify-content: center;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 5px;
+}
+
+/* Grupo de generos */
+
+label[for="maculino"],
+label[for="femenino"],
+label[for="noGen"],
+label[for="otro"] {
+  font-weight: normal;
+  margin: 0 15px;
+}
+
+/* grupo de aficiones */
+
+label[for="deportes"],
+label[for="pintura"],
+label[for="musica"] {
+  margin: 0 15px;
+}
+
+/* Estilos del boton de envio */
+
+input[type="submit"] {
+  background-color: aliceblue;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 10px;
+  transition: 0.2s all;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(137, 200, 255);
+  color: white;
+}

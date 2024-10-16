@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+/* Effecto parallax */
+.parallax,
+.parallax1,
+.parallax2,
+.parallax3,
+.parallax4,
+.parallax5 {
+  /* configuracion del fondo */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+.parallax {
+  /* configuracion del fondo */
+  background-image: url("../img/bg1.jpg");
+}
+.parallax1 {
+  /* configuracion del fondo */
+  background-image: url("../img/bg2.jpg");
+}
+
+.parallax2 {
+  /* configuracion del fondo */
+  background-image: url("../img/bg3.jpg");
+}
+.parallax3 {
+  /* configuracion del fondo */
+  background-image: url("../img/bg4.jpg");
+}
+.parallax4 {
+  /* configuracion del fondo */
+  background-image: url("../img/bg5.jpg");
+}
+
+/* secciopnes normales  */
+
+.contenido {
+  height: 500px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenido {
+  font-size: 2.5rem;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 002</title>
+    <link rel="stylesheet" href="css/formulario_002.css">
+</head>
+
+<body>
+    <!-- Estrutura HTML 
+     Hacer un formulario. Este incluira varios tipos de campos:
+     Campos de texto
+     Menus desplegables
+     Casilla de verificacion (checkbox)
+     Botones de radio (radio buttons)
+     Area de texto
+     Boton de envio
+     Vincularla con una hoja de estilos
+     -->
+
+    <div class="form-container">
+        <form action="#" method="get" id="second-form">
+            <h2>Formulario de Registro</h2>
+            <!-- Campo Nombre -->
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+
+
+            <!-- Campo Apellido -->
+            <label for="lastName">Apelido</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Tu apellido" required>
+
+
+            <!-- Campo Email -->
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="prueba@gmail.com" required>
+
+
+            <!-- Campo Telefono -->
+            <label for="phone-number">Numero de telefono</label>
+            <input type="tel" id="phone-number" name="phone-number" placeholder="Tu telefono" required>
+
+
+            <!-- Seleccionar pais -->
+            <label for="country-select">Pais</label>
+            <select name="country-select" id="country-select">
+                <option value="Argetina">Argentina</option>
+                <option value="Espana">España</option>
+                <option value="Venezuela">Venezuela</option>
+                <option value="Brazil">Brazil</option>
+            </select>
+
+
+            <!-- Botones redio, seleccionar genero -->
+            <label>Genero</label>
+            <div class="radio-group">
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="masculino" name="genero" value="masculino">
+                <label for="femenino">Femenino</label>
+                <input type="radio" id="femenino" name="genero" value="femenino">
+                <label for="noGen">No Gen</label>
+                <input type="radio" id="noGen" name="genero" value="noGen">
+                <label for="otro">Prefiero no decirlo</label>
+                <input type="radio" id="otro" name="genero" value="otro">
+            </div>
+
+            <!-- Hobbies, aficiones usando checkbox -->
+            <label>Aficiones</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="deportes" name="aficiones" value="deportes">
+                <label for="deportes">Deportes</label>
+                <input type="checkbox" id="pintura" name="aficiones" value="pintura">
+                <label for="pintura">Pintura</label>
+                <input type="checkbox" id="musica" name="aficiones" value="musica">
+                <label for="musica">Musica</label>
+            </div>
+
+            <!-- Area de comentarios -->
+            <label for="comentarios">Comentarios</label>
+            <textarea name="comentarios" id="comentarios" rows="4" placeholder="Aqui escribe tu comentario"></textarea>
+
+            <!-- Botton de envio -->
+            <input type="submit">
+        </form>
+
+    </div>
+</body>
+
+</html>

@@ -18,6 +18,10 @@ body {
 
 .principal_header nav li {
   display: inline;
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
 }
 .principal_header nav ul li a {
   text-decoration: none;

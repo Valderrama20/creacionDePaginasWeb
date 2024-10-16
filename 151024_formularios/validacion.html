@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validacion</title>
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" name="nombre" required minlength="3" maxlength="10">
+        <!-- required: campo obligatorio -->
+        <!-- minlength es el numero minimo de caracteres -->
+        <!-- maxlength es el numero maximo de caracteres -->
+
+        <input type="submit">
+    </form>
+
+
+    <form action="">
+        <!--PATRONES Regex -->
+        <input type="text" name="dni" pattern="\d{8}[A-Za-z]" title="Debe ser un dni valido">
+
+        <button type="submit">Enviar DNI</button>
+    </form>
+</body>
+
+</html>

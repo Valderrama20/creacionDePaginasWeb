@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uso de css en formulario</title>
+    <style>
+        *::placeholder {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        form {
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid greenyellow;
+            border-radius: 5px;
+            background-color: black;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid greenyellow;
+            color: white;
+            border-radius: 5px;
+            background-color: black;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            border: 1px solid greenyellow;
+        }
+
+        /* Le damos un tamaño al formulario de 300px, aplicamos margenes y rellenos
+        para escalar elementos, estiliza los inputs y los botones con bordes redondeados */
+    </style>
+</head>
+
+
+<body>
+    <!-- ejemplo basico del uso de css en formularios -->
+    <!-- formulario de contactos -->
+    <form action="/submit" method="post">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+        <label for="email">Correo Electronico</label>
+        <input type="email" id="email" name="email" placeholder="Escribe tu elementos" required>
+        <label for="comentario">Comentarios</label>
+        <textarea name="comentario" id="comentarios" placeholder="Escribe un comentario" required></textarea>
+        <button type="submit"> Enviar</button>
+    </form>
+</body>
+
+</html>
