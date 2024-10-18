@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Rellenar</legend>
+            <input type="radio" name="langue" value="english"> Ingles
+            <br>
+            <input type="radio" name="langue" value="aleman"> Aleman
+            <br>
+            <input type="radio" name="langue" value="portugues"> Portugues
+            <br>
+            <input type="radio" name="langue" value="spanish"> Español
+            <br>
+            <p>
+                <select name="conector">
+                    <option value="usb">USB</option>
+                    <option value="cd">CD</option>
+                    <option value="hd">Discoduro</option>
+                    <option value="piña">Piña</option>
+                    <option value="limon">Limon</option>
+                </select>
+            </p>
+            Nombre: <input type="text" name="name"> <br>
+            Apellidos: <input type="text" name="lastName">
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Indique sus preferencias</legend>
+            <select name="cars" id="expensiveCars" multiple="varios">
+                <option value="audi">Audi</option>
+                <option value="bmw">BMW</option>
+                <option value="tesla">Tesla</option>
+                <option value="ferrari">Ferrari</option>
+            </select>
+            <p>
+                indique su sexo <br>
+                <input type="checkbox" name="sexo" value="woman"> Mujer <br>
+                <input type="checkbox" name="sexo" value="men"> hombre <br>
+                <input type="checkbox" name="sexo" value="otro"> Otro <br>
+                <input type="checkbox" name="sexo" value="sinGenero"> No procede <br>
+            </p>
+
+            elija su fecha de nacimiento
+            <input type="date">
+        </fieldset>
+    </form>
+</body>
+
+</html>

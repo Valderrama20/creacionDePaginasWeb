@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="valderrama20">
+    <meta name="conten" content="">
+    <title>Validacon de formularios</title>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        form {
+            width: 300px;
+            margin: auto;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 200px;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: white;
+            border: 2px solid rgb(1, 192, 1);
+            color: rgb(1, 192, 1);
+            padding: 10px 20px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Crear un formulario y validar que todos los campos esten llenos antes de enviar</h3>
+
+    <h1>Formulario de contacto</h1>
+
+    <form onsubmit="return validForm()">
+        <p>
+            <label for="firstName">Nombre: </label>
+            <input type="text" id="firstName" name="firstName">
+        </p>
+        <p>
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email">
+        </p>
+        <input type="submit" value="Enviar formulario">
+        <script>
+            function validForm() {
+                // Identifamos las variables del formulario eh indicamos que las localice
+                let name = document.getElementById("firstName").value
+                let email = document.getElementById("email").value
+
+                // si el nombre y el email estan completados valida el formulario
+
+                // Si los datos no estan completos emite una alerta y evita que se envie el formulario
+                if (!name || !email) {
+                    alert("Todos los campos son abligatorios")
+                    return false; // evita el envio del formulario
+                }
+                return true
+            }
+        </script>
+    </form>
+</body>
+
+</html>

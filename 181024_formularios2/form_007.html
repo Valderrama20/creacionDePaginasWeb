@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="valderrama2o">
+    <meta name="conten" content="">
+    <title>Formulario 007</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cambiar el fondo de la pagina con un boton</h1>
+    <button onclick="changeColor('red')">Rojo</button>
+    <button onclick="changeColor('green')">Verde</button>
+    <button onclick="changeColor('yellow')">Amarillo</button>
+    <script>
+        function changeColor(color) {
+            document.body.style.backgroundColor = color
+        }
+    </script>
+</body>
+
+</html>
