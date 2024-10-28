@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario_003</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Formulario</legend>
+        <form>
+            <!-- fieldset para elegir un color -->
+            <fieldset>
+                <legend>Elegir Color</legend>
+                <input type="color">
+            </fieldset>
+            <!-- fieldset para escribir en un textarea -->
+            <fieldset>
+                <legend>Escribir aqui</legend>
+                <textarea rows="5" cols="53">Por favor, escriba aquí</textarea>
+            </fieldset>
+            <!-- fieldset para seleccioanr un lenguaje -->
+            <fieldset>
+                <legend>Seleccionar lenguaje</legend>
+                <select name="lenguaje">
+                    <option value="java">Java</option>
+                    <option value="python">Python</option>
+                    <option value="html">HTML</option>
+                    <option value="visual_basic">Visual Basic</option>
+                </select>
+            </fieldset>
+            <!-- fieldset para seleccioanar un ciclo -->
+            <fieldset>
+                <legend>Elegir Ciclo</legend>
+                <input type="checkbox" name="ciclo" value="cicloasir"> ASIR
+                <input type="checkbox" name="ciclo" value="ciclodam"> DAM
+                <input type="checkbox" name="ciclo" value="ciclodaw"> DAW
+            </fieldset>
+            <!-- fieldset para seleccioanar una fecha -->
+            <fieldset>
+                <legend>Elegir Fecha</legend>
+                <input type="date">
+            </fieldset>
+            <!-- fieldset para seleccioanar un Archivo -->
+            <fieldset>
+                <legend>Elegir Archivo </legend>
+                <input type="file">
+            </fieldset>
+            <!-- fieldset para seleccioanar Ciclos -->
+            <fieldset>
+                <legend>Seleccionar Ciclos</legend>
+                <select name="ciclo" multiple>
+                    <option value="smir">SMIR</option>
+                    <option value="asir">ASIR</option>
+                    <option value="dam">DAM</option>
+                    <option value="daw">DAW</option>
+                </select>
+            </fieldset>
+        </form>
+    </fieldset>
+</body>
+
+</html>

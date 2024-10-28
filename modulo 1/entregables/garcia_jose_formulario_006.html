@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 006</title>
+    <meta name="author" content="valderrama20">
+    <meta name="description" content="contiene un Formulario con diversos elementos">
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Preferencias</legend>
+            <!-- Input de tipo date para selecciopanar una fecha -->
+            <p>
+                Indicar Fecha <input type="date">
+            </p>
+            <!-- Input de tipo time para selecciopanar una hora -->
+            <p>
+                Indicar hora <input type="time">
+            </p>
+            <!-- Input de tipo file para selecciopanar un archivo -->
+            <p>
+                <input type="file">
+            </p>
+            <!-- Select con seleccion multiple para elegir un lenguaje -->
+            <p>
+                <select name="lenguaje" multiple>
+                    <option value="python">Python</option>
+                    <option value="html">HTML</option>
+                    <option value="visual_basic">Visual Basic</option>
+                    <option value="java">Java</option>
+                </select>
+            </p>
+
+            <!-- Input de tipo color para selecciopanar un color -->
+            Elegir Color <input type="color"> <br>
+
+            <!-- Inputs de tipo checkbox para selecciopanar el hardware -->
+            <p>
+                <input type="checkbox" name="hardware" value="hardwaremonitor_led"> Monitor LED
+                <input type="checkbox" name="hardware" value="hardwaressd"> SSD
+            </p>
+            <!-- Textarea para escribir algun comentario -->
+            <textarea rows="5" cols="48">Inserte aquí el texto</textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Datos Usuario</legend>
+
+            <!-- inputs para escribir diversa infomacion como el instituto, su estudio elegido,
+         nombre, apellido eh email -->
+            <p>
+                Instituto <input type="text" name="instituto"> <br>
+                Estudios elegidos <input type="text" name="estudios"> <br>
+                Nombre <input type="text" name="nombre"> <br>
+                Apellidos <input type="text" name="apellidos"> <br>
+                Email <input type="text" name="email"> <br>
+            </p>
+            <!-- inputs de tipo radio para seleccionar un conector-->
+            USB <input type="radio" name="conector" value="conectorusb">
+            Ethernet <input type="radio" name="conector" value="conectorethernet">
+            HDMI <input type="radio" name="conector" value="conectorhdmi">
+        </fieldset>
+    </form>
+</body>
+
+</html>

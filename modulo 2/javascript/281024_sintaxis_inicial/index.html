@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sintaxis de JavaScript</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        // Comentario para una sola linea se utiliza las dos barras
+        /* Comentarios
+        de 
+        varias lineas */
+
+        console.log("Hola mundo");
+        console.log("1213134134");
+
+        /*
+        SUMAR DOS NUMEROS:
+        Obj: Usuario ingresa dos números y se imprima la suma
+        Instrucciones: solicita al usuario dos números, súmalos e imprime el resultado
+
+        Salida:
+        Ingresa primer numero de una cifra: 9
+        Ingresa segundo numero de una cifra: 3
+        La suma es: 12
+        
+        -------vamos a utilizar
+
+        - variables: let 
+        - prompt()
+        - funcion parseInt() 
+
+
+        let firstNumber = parseInt(prompt("ingrese un numero"));
+        let twoNumber = parseInt(prompt("ingrese el segundo numero"));
+
+        console.log("La suma es: " + (firstNumber + twoNumber));
+        */
+
+
+        /*
+        NUMERO IMPAR O PAR
+        Obj: Determinar si el numero es par o impar
+        Instrucciones: solicita al usuario un numero y comprueba si es par o impar
+
+        Salida:
+        Ingresa un numero: 5
+        El numero es: impar
+        
+        ingresa un numero: 6
+        El numero es : par
+
+
+        let number = parseInt(prompt("ingrese un numero"));
+
+        if (number % 2 === 0) console.log("Es un numero par")
+        else console.log("Es un numero impar")
+        */
+
+        /*
+         Contar de 1 al 10
+         Obj: crear un contador del 1 al 10 usando un bucle
+         Instrucciones: imprime los números de 1 a 10 en consola usando un bucle   
+
+        for (let i = 1; i <= 10; i++) {
+            console.log(i);
+        }
+         */
+
+
+        /*
+
+        INVERTIR UN CADENA DE CARACTERES --- STRING
+        Obj: Invertir una palabra o frase ingresada por el usuario
+        
+        Salida:
+        Ingresa una palabra: Hello
+        Invertido: olleh        
+        
+
+        let texto = prompt("Escriba una palabra")
+
+        let invertido = texto.split("").reverse().join("")
+
+        console.log("La paralabra invertida es: " + invertido)
+      
+        */
+
+        /*
+            TABLA DE MULTIPLICAR
+            Objetivo: generar una tabla de multiplicar según un numero
+            
+            Instrucciones: Solicita al usuario un numero e imprimir su tabla de multiplicar de 1 al 10
+            
+            Salida:
+            Ingresa un numero: 5
+            Salida
+            5 x 1 = 5
+            .....
+            5 x 10 = 50
+
+            dos tipos de numeros:
+            - int
+            - float
+
+
+        let numero = parseInt(prompt("ingrese un unmero"));
+
+        for (let i = 1; i <= 10; i++) {
+            console.log(numero + " x " + i + " = " + (numero * i));
+        }
+        */
+
+
+
+        /*
+        Calculadora de área de un círculo
+        Objetivo: Calcular el área de un círculo.
+        Instrucciones: Pide al usuario que ingrese el radio de un círculo y calcula el área usando la fórmula: .
+        Ejemplo de salida:
+
+        Ingrese el radio del círculo: 5
+        El área del círculo es: 78.54
+
+        - formula del area de un circulo PI x r^2
+
+
+
+        const PI = 3.1416;
+        let radio = parseFloat(prompt("Ingresa el radio del circulo"));
+        let area = PI * Math.pow(radio, 2);
+
+        console.log("El area del ciculo es " + area);
+
+        */
+
+        /*
+
+        COMPARAR DOS NUMEROS
+        obj: comparar dos numero ingresados por usuario
+        
+        Instrucción: Ingresa el dos numero y determina cual es mayor o si son iguales
+        Salida:
+        Ingresa el primer numero: 5
+        Ingresa el segundo numero : 8
+        El numero mayor es: 8
+
+
+        let a = parseInt(prompt("Ingresa un numero"));
+        let b = parseInt(prompt("Ingresa el segundo numero"));
+
+        if (a > b) console.log("El numero mayor es: " + a);
+        else if (a < b) console.log("El numero mayor es: " + b);
+        else console.log("Los numeros son iguales");
+
+        */
+
+        /* 
+        Cuenta regresiva
+
+        crea una funcion que muestre una cuenta regresiva del 5 al 1
+
+        */
+
+
+        function cuentaRegresiva() {
+            for (let i = 5; i >= 1; i--) {
+                console.log(i);
+            }
+        }
+
+        
+
+        cuentaRegresiva();
+
+
+    </script>
+</body>
+
+</html>

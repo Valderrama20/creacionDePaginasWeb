@@ -1,0 +1,44 @@
+/* Lo basico */
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.contenidoForm {
+  height: 100vh;
+  width: 100%;
+  align-content: center;
+}
+
+#registroForm {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+#registroForm input {
+  padding: 10px;
+  margin: 5px 0 15px 0;
+  border-radius: 5px;
+  background-color: black;
+  border: 1px solid white;
+  color: aqua;
+  font-weight: bold;
+}
+#registroForm input::placeholder {
+  color: rgb(0, 255, 42);
+}
+
+#registroForm button {
+  background: black;
+  border: 1px solid white;
+  border-radius: 3px;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  margin: 20px 0;
+  cursor: pointer;
+}
