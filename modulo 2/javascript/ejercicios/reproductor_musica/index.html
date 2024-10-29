@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de musica</title>
+    <!-- Enlace a los estilos -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Contenedero de la muscia -->
+    <div class="play">
+        <!-- Caratula -->
+        <div class="cover">
+            <img src="img/believer.webp" alt="Caratula de la cancion" id="cover">
+        </div>
+        <!-- Titulo de la cancion  -->
+        <div class="info">
+            <h2 id="songTitle">Titulo de la cancion</h2>
+        </div>
+        <!-- Controles del reproductor -->
+        <div class="controls">
+            <button onclick="prevSong()" id="prev">&#x23ee;</button>
+            <button onclick="playPauseSong()" id="playPause">&#x23ef;</button>
+            <button onclick="nextSong()" id="next">&#x23ed;</button>
+            <input type="range" id="volumen" min="0" max="1" step="0.1" onchange="setVolumen(this.value)">
+        </div>
+
+        <!-- Play music -->
+        <div class="player">
+            <audio id="audioPlay"></audio>
+
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

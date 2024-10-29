@@ -1,0 +1,54 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+}
+
+/* Estilos de pleyer */
+
+.play {
+  text-align: center;
+  width: 400px;
+  border-radius: 10px;
+}
+
+/* Estilos de cractulas */
+.cover img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Estilos de titulos */
+.info h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+/* Estilos de controles */
+.controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Estilos de los botones del control */
+
+.controls button {
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+/* Estilos de control volumen*/
+
+.controls input[type="range"] {
+  width: 100px;
+}

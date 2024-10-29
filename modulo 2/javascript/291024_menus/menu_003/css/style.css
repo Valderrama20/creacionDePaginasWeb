@@ -1,0 +1,56 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+/* Contenedor de menu lateral */
+
+.sideNav {
+  /* Que ocupe todo la altura de la pantalla */
+  height: 100vh;
+  /* El ancho inicial de o para que este oculto */
+  width: 0;
+  /* Menu fijo en el lado izquierdo */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  /* ocultar el posicionamiento horizontal (desbordamiento)*/
+  overflow-x: hidden;
+  /* desplazamineto al abrir y cerrar sea suave */
+  transition: 0.5s;
+  /* Espacio superior */
+  padding-top: 30pxpx;
+}
+
+/* Estilos de los enlaces del nav lateral */
+
+.sideNav a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+}
+
+/* Estilos al fondo al pasr el cursor */
+
+.sideNav a:hover {
+  background-color: gray;
+}
+
+/* Estilos al botton para abrir el nav */
+
+.openBotton {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* estilos al botton para cerrar el nav */
+
+.closeBotton {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 36px;
+}

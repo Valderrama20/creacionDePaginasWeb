@@ -1,0 +1,37 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* Contenedor principal del menu principal */
+
+.menuHorizontal {
+  /* Alinea los elementos Horizontalmente */
+  display: flex;
+  /* Fondo de color para el nav */
+  background-color: black;
+  /* Espacio en el elemento */
+  padding: 10px;
+}
+
+/* Estilos para cada enlace de menu */
+
+.menuHorizontal a {
+  /* Color de texto */
+  color: white;
+  /* Espacio al rededor del texto */
+  padding: 10px 15px;
+  /* Quitamos el subrayado de los enlaces */
+  text-decoration: none;
+
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+/* Cambio de color del fondo cuando el cursor pasa por encima */
+
+.menuHorizontal a:hover {
+  border-bottom: 2px solid greenyellow;
+  color: greenyellow;
+}

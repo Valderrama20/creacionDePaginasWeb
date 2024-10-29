@@ -1,0 +1,63 @@
+body {
+  background-color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* Contenedor principal del menu  */
+
+.menuDesplegable {
+  display: flex;
+  background-color: black;
+  padding: 10px;
+}
+
+/* Estilos para cada enlace principal en el menu */
+
+.menuDesplegable a {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+/* Contenedor del elemento desplegable */
+
+.desplegable {
+  /* Es necesario colocar una posicion relativa justo debajo */
+  position: relative;
+  padding-top: 10px;
+}
+
+/* Contenido oculto por defecto */
+
+.contenidoDesplegable {
+  /* Oculto inicialmente */
+  display: none;
+  position: absolute;
+  border: 2px solid yellow;
+  background-color: black;
+  bottom: -115px;
+  /* ancho minimo */
+  min-width: 120px;
+  /* Asegurar que este por ancima de los otros elementos */
+  z-index: 1;
+}
+
+/* Estilos de los enlaces dentro del menu desplegable */
+
+.contenidoDesplegable a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Color del fondo al pasar el curso sobre las opciones desplegables */
+.contenidoDesplegable a:hover {
+  background-color: gray;
+}
+
+/* Mostrar el menu desplegable al pasar el curso sobre el contendor */
+
+.desplegable:hover .contenidoDesplegable {
+  display: block;
+}
