@@ -1,0 +1,206 @@
+@import url(general.css);
+
+iframe {
+  border-radius: 5px;
+}
+
+/* Esstilos para los componentes */
+
+.components {
+  width: 100%;
+}
+
+/* Estilos de la primera seccion ( hero ) */
+
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../img/004.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  min-height: 60vh;
+  align-content: center;
+}
+
+.hero div {
+  margin: 0 20%;
+  max-width: 400px;
+}
+
+.hero h1 {
+  font-size: 70px;
+  line-height: 1.2;
+}
+
+.hero p {
+  margin: 10px 0 20px 0;
+}
+
+.hero div a {
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 5px 30px;
+}
+
+/* Estilos de la seccion2 */
+
+.section2 {
+  max-width: 70%;
+  margin: 20px auto;
+}
+.section2 h2 {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: rgb(117, 117, 117);
+}
+
+.section2 span {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--text-gray);
+}
+
+.section2 img {
+  width: 100%;
+}
+
+.feacture1 {
+  background-image: url("../img/propiedad8.jpg");
+}
+.feacture2 {
+  background-image: url("../img/propiedad7.jpg");
+}
+.feacture3 {
+  background-image: url("../img/propiedad6.jpg");
+}
+
+.feature > div {
+  border-radius: 8px;
+  height: 300px;
+  width: 100%;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 0;
+  background-color: white;
+}
+
+.feature {
+  width: 30%;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.feature h4 {
+  font-weight: 600;
+  color: var(--text-gray);
+}
+
+.feature button {
+  padding: 3px 30px;
+  margin: 5px 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* estilos de la seccion 3 */
+
+.section3 {
+  display: flex;
+  max-width: 70%;
+  margin: 100px auto;
+  justify-content: right;
+  position: relative;
+}
+
+.imgContainer {
+  width: 20%;
+  position: relative;
+}
+
+.imgContainer img {
+  position: absolute;
+  border-radius: 10px;
+  height: 400px;
+  top: 10%;
+  right: -70%;
+}
+
+.textContainer {
+  display: flex;
+  border-radius: 5px;
+  justify-content: end;
+  width: 100%;
+  color: white;
+  background-color: black;
+}
+
+.textContainer h2 {
+  font-size: xx-large;
+}
+.textContainer p {
+  font-weight: 300;
+}
+
+.textContainer div {
+  margin: 4% 25% 10% 0;
+  max-width: 350px;
+}
+
+/* Estilos para la nav desplegable */
+
+.sideNav {
+  /* Que ocupe todo la altura de la pantalla */
+  height: 100vh;
+  /* El ancho inicial de o para que este oculto */
+  width: 0;
+  /* Menu fijo en el lado izquierdo */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  /* ocultar el posicionamiento horizontal (desbordamiento)*/
+  overflow-x: hidden;
+  /* desplazamineto al abrir y cerrar sea suave */
+  transition: 0.5s;
+  /* Espacio superior */
+  padding-top: 30pxpx;
+}
+
+/* Estilos de los enlaces del nav lateral */
+
+.sideNav a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+}
+
+/* Estilos al fondo al pasr el cursor */
+
+.sideNav a:hover {
+  background-color: gray;
+}
+
+/* Estilos al botton para abrir el nav */
+
+.openBotton {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* estilos al botton para cerrar el nav */
+
+.closeBotton {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 36px;
+}

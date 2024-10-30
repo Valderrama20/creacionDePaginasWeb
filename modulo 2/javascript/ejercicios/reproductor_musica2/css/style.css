@@ -1,0 +1,58 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cover img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  transition: transform 0.5s ease;
+}
+
+.cover img.playing {
+  animation: rotate 5s linear infinite;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.player {
+  text-align: center;
+  padding: 20px;
+}
+
+.info {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.controls button {
+  font-size: 1.5em;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.controls input[type="range"] {
+  width: 100%;
+}

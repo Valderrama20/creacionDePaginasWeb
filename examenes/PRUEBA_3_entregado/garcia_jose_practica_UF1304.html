@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Formularios Parte Practica</title>
+    <meta name="author" content="valderrama20">
+    <meta name="description" content="Parte practica del examen de formularios">
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Primera Parte</legend>
+            <!-- Select multiple para elegir la velocidad en Mbits -->
+            <p>
+                <select name="velocidad" multiple>
+                    <option value="100_mbits">100 Mbits</option>
+                    <option value="1000_mbits">1000 Mbits</option>
+                </select>
+            </p>
+            <!-- inputs tipo text para indicar el dni, nombre, apelidos y email -->
+            <p>
+                DNI <input type="text" name="dni"> <br>
+                Nombre <input type="text" name="nombre"> <br>
+                Apellidos <input type="text" name="apellidos"> <br>
+                Email <input type="text" name="email"> <br>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Segunda Parte</legend>
+            <!-- input tipo color para elegir un color -->
+            <p>
+                Elegir color <input type="color">
+            </p>
+            <!-- Textarea para escribir un comentario -->
+            <p>
+                <textarea rows="6" cols="49">Por favor, escriba aquí</textarea>
+            </p>
+            <!-- inputs tipo checkbox para elegir procesadores -->
+            <p>
+                AMD <input type="checkbox" name="procesador" value="procesadoramd">
+                Intel i5 <input type="checkbox" name="procesador" value="procesadorintel_i5">
+                Intel i7 <input type="checkbox" name="procesador" value="procesadorintel_i7">
+            </p>
+            <!-- input tipo datetime-local para indicar la hora y fecha -->
+            <p>
+                Indicar Hora y fecha <input type="datetime-local">
+            </p>
+            <!-- inputs tipo radio para elegir un tipo de red -->
+            <p>
+                3G <input type="radio" name="red" value="red3g">
+                4G <input type="radio" name="red" value="red4g">
+                5G <input type="radio" name="red" value="red5g">
+            </p>
+            <!-- inputs tipo file para seleccionar un archivo -->
+            <p>
+                <input type="file">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Tercera parte</legend>
+            <!-- inputs tipo checkbox para seleccioanar asignaturas -->
+            <p>
+                <input type="checkbox" name="asignatura" value="asignaturahistoria"> Historia
+                <input type="checkbox" name="asignatura" value="asignaturageografia"> Geografía
+                <input type="checkbox" name="asignatura" value="asignaturalengua"> Lengua
+                <input type="checkbox" name="asignatura" value="asignaturamatematicas"> Matemáticas
+            </p>
+            <!-- input tipo date para indicar el dia de hoy -->
+            <p>
+                Indicar dia <input type="date">
+            </p>
+            <!-- inputs tipo file para seleccionar un archivo -->
+            <p>
+                <input type="file">
+            </p>
+            <!-- Textarea para escribir un texto -->
+            <p>
+                <textarea rows="8" cols="49">Inserte aqui el texto</textarea>
+            </p>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cien Pisos - Home</title>
+    <meta name="author" content="valderrama20">
+    <meta name="description" content="Home de inmobiliaria Cien Pisos">
+    <link rel="icon" type="image/x-icon" href="img/logo_4_blanco.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css ">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- Cabecera de la pagina con un nav y el logo de la empresa -->
+    <header class="header">
+        <div>
+            <img src="img/logo_2.png" class="logo2" alt="logo de la inmobiliaria">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hogar</a></li>
+                <li><a href="about.html">Nosotros</a></li>
+                <li><a href="servicios.html">servicios</a></li>
+                <li> <a href="contacto.html">Contacto</a></li>
+                <li class="shoppingCart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </li>
+            </ul>
+            <!-- responsive para pantallas pequeñas -->
+            <div class="sideNav" id="nav">
+                <!-- Boton para cerrar el menu -->
+                <a href="javascript:void(0)" class="closeBotton" onclick="closeNav()">X</a>
+                <a href="#">Inicio</a>
+                <a href="#">Servicio</a>
+                <a href="#">Acerda de</a>
+                <a href="#">Contacto</a>
+            </div>
+            <button class="openBotton" onclick="openNav()">&#9776 Menu</button>
+        </nav>
+    </header>
+    <!-- Contenido Principalo de la pagina -->
+    <main>
+        <!-- Seccion principal de la pagina la cual incluye un hero con el nombre de la inmobiliaria, informacion sobre 
+         la misma y un botton para solicitar un asesor -->
+        <div class="hero">
+            <div>
+                <h1>Cien pisos<br>desde 1989</h1>
+                <p>
+                    Inmobiliaria CienPisos te damos soporte legal desde el primer
+                    momento, asegurándonos de que todo está en orden para que
+                    puedas vender tu casa con total tranquilidad.
+                </p>
+                <a href="contacto.html">Contactar un asesor</a>
+            </div>
+
+        </div>
+        <!-- Segunda parte de la app la cual incluye una alista de cartas con diferentes
+         casas y departamentos, encabezado medio para su ubicacion y un boton para ver sus detalles-->
+        <section class="section2">
+            <h2>Propiedades Recomendadas</h2>
+            <span>Abierto 24/7/265</span>
+            <!-- Tres columnas -->
+            <div class="features">
+                <div class="feature">
+                    <div class="feacture1 bg-img"></div>
+                    <h4>Miami Beach - Florida</h4>
+                    <button class="blue-btn">Detalles</button>
+                </div>
+                <div class="feature">
+                    <div class="feacture2 bg-img"></div>
+                    <h4>Malaga - España</h4>
+                    <button class="blue-btn">Detalles</button>
+                </div>
+                <div class="feature">
+                    <div class="feacture3 bg-img"></div>
+                    <h4>Paris - Francia</h4>
+                    <button class="blue-btn">Detalles</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tercera parte la cual tiene infromacion sobre las compra de viviendas-->
+        <section class="section3">
+            <div class="imgContainer">
+                <img src="img/001.jpg" alt="llaves de casa">
+            </div>
+            <div class="textContainer">
+                <div>
+                    <h2>Compra tu vivienda</h2>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed debitis, odio suscipit eum
+                        quia
+                        placeat asperiores et reiciendis quos iste explicabo voluptatum maxime error obcaecati
+                        incidunt
+                        eaque adipisci voluptas. Aut?
+                    </p>
+                    <br>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed debitis, odio suscipit eum
+                        quia
+                        placeat asperiores et reiciendis quos iste explicabo voluptatum maxime error obcaecati
+                        incidunt
+                        eaque adipisci voluptas. Aut?
+                    </p>
+                    <br>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed debitis, odio suscipit eum
+                        quia
+                        placeat asperiores et reiciendis quos iste explicabo voluptatum maxime error obcaecati
+                        incidunt
+                        eaque adipisci voluptas. Aut?
+                    </p>
+                    <span>------</span>
+                    <br>
+                    <p>Jose y Jhon Doe <br> <strong>Acme al aire libre</strong></p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Pie da la apgina que incluye el logo y las redes sociales de la app -->
+    <footer>
+        <div><a href="index.html"><img src="img/logo_2.png" class="logo2" alt="logo de la inmobiliaria"></a></div>
+        <div>
+            <ul>
+                <li><a href="https://x.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                </li>
+                <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        <script src="js/script.js"></script>
+
+    </footer>
+</body>
+
+</html>

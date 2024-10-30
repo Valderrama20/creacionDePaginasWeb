@@ -1,0 +1,66 @@
+@import url(general.css);
+
+/* Estilos para el hero con informacion del la empresa */
+.bg-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url("../img/equipoDeTrabajo.jpg");
+  padding: 6.5rem 0;
+  color: white;
+  height: calc(100vh - 580px);
+}
+
+/* Estilos de las cartas con los valores de la empresa */
+.valores {
+  background-color: var(--primary-color);
+  color: rgb(236, 236, 236);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.valores > div {
+  display: flex;
+  max-width: 70%;
+  margin: auto;
+}
+
+.valores h2 {
+  font-size: 2.2rem;
+  padding: 20px 0;
+}
+
+/* estilos de about-content */
+
+.about-1 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.about-1 .img {
+  background-image: url("../img/007.jpg");
+  border-radius: 10px;
+  background-size: cover;
+  height: 300px;
+  width: 50%;
+}
+
+.img-container {
+  background-image: url("../img/005.jpg");
+  border-radius: 10px;
+  background-size: cover;
+  height: 300px;
+  width: 50%;
+}
+
+.texto {
+  max-width: 500px;
+}
+
+.texto h3 {
+  max-width: 500px;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}

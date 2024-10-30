@@ -1,0 +1,97 @@
+@import url(general.css);
+
+/* Estilos del hero principal */
+.services-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  padding: 2em;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.hero-column {
+  max-width: 500px;
+  margin-bottom: 1.5em;
+}
+
+.hero-column h1 {
+  font-size: 2.5em;
+}
+
+/* estilos de los servicios de la inmobiliaria */
+
+.services {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  border: 2px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin: 10px;
+}
+
+.card span {
+  max-width: 150px;
+}
+
+.card:hover {
+  border: 2px solid white;
+}
+/* estilos de la Galería de imagenes */
+.img-gallery {
+  margin: 2em;
+  padding: 1em;
+  text-align: center;
+}
+
+.img-gallery h2 {
+  font-size: xx-large;
+  margin-bottom: 1.5em;
+  color: var(--primary-color);
+}
+
+.gallery-fila {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1.5em;
+}
+
+.gallery-fila img {
+  width: 30%;
+  height: 300px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-fila img:hover {
+  transform: scale(1.05);
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  .hero-two-columns {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-column {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+
+  .gallery-row {
+    flex-direction: column;
+  }
+
+  .gallery-row img {
+    width: 80%;
+    margin-bottom: 1em;
+  }
+}

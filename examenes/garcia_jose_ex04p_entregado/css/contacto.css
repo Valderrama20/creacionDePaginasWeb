@@ -1,0 +1,139 @@
+@import url(general.css);
+
+/* Estilos del hero principal */
+.bg-img {
+  margin: 2rem;
+}
+
+.bg-img h1 {
+  color: var(--primary-color);
+}
+
+/* Estilos del fromulario de contacto y ubicacion */
+
+.contact-form {
+  padding: 1em;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.contact-form h2 {
+  font-size: xx-large;
+}
+
+/* Estilos de la ubicacion de la inmobiliaria */
+.ubication-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.ubication {
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.ubication h3,
+h2 {
+  color: var(--primary-color);
+}
+
+.ubication i {
+  color: var(--primary-color);
+}
+/* Estilos del fromulario */
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container label {
+  margin-top: 1em;
+}
+
+.form-container input,
+.form-container textarea {
+  padding: 0.5em;
+  margin-top: 0.5em;
+  border-radius: 5px;
+  border: 2px solid rgb(234, 233, 233);
+  outline: none;
+  transition: all 0.2s;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+  border: 2px solid var(--primary-color);
+}
+
+.form-container button {
+  margin-top: 1em;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: #0082d3;
+  border: 2px solid #0082d3;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.form-container button:hover {
+  background-color: white;
+  color: #0082d3;
+}
+
+/* Estilos del fieldset */
+
+.form-container fieldset {
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  margin: 15px 0;
+}
+
+legend {
+  font-size: 1.4rem;
+  color: var(--text-gray);
+}
+
+/* Estilos de la seccion de donaciones */
+
+.donation-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  padding: 30px 0;
+}
+
+.donation-section h2 {
+  color: #0082d3;
+  font-size: 2rem;
+}
+
+.donation-section div {
+  display: flex;
+  flex-direction: column;
+}
+
+.donation-section button {
+  color: white;
+  border: 2px solid #0082d3;
+  background-color: #0082d3;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  margin: 3px 0;
+  padding: 5px 100px;
+  transition: all 0.2s;
+}
+
+.donation-section button:hover {
+  color: #0082d3;
+  background-color: white;
+  cursor: pointer;
+}

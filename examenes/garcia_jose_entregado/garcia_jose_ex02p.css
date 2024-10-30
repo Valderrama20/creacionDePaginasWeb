@@ -1,0 +1,35 @@
+/* Aqui le estamos dando un fondo a todo nuestro documento */
+body {
+  background-color: #f0f0f0;
+}
+/* Aqui le damos u margen de 20px y un interlineado de 1.5 */
+p {
+  margin: 20px;
+  line-height: 1.5;
+}
+/* Aqui a todos los h1 le alineamos su texto al centro, estan en negrita
+y tienen un tamaño de fuente de 36px */
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+}
+/* A las listas ordenadas le damos un color azul */
+ol {
+  color: #0000ff;
+}
+/* A las listas no ordenadas le damos un color verde */
+ul {
+  color: #008000;
+}
+/* Cuando el cursor este por encima de mi link este sera rojo */
+a:hover {
+  color: #ff0000;
+}
+/* Aqui todos los botones con la case .boton tendran un fondo naranja, con el texto blanco
+y bordes redondeados */
+.boton {
+  background-color: #ff6600;
+  color: #ffffff;
+  border-radius: 5px;
+}

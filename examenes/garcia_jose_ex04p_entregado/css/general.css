@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+/* Este archivo css fue creado para compartir estilos 
+entre las diferentes paginas y evitar el codigo repetido
+como en el header, footer, tipografias, etc. */
+
+/* variables */
+
+:root {
+  --primary-color: #0082d3;
+  --text-gray: rgb(64, 64, 64);
+}
+
+/* estilos compartidos */
+
+* {
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Estilos para botones */
+.blue-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.blue-btn:hover {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+/* Estilos de los contenedores con una img como bg */
+
+.bg-img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.bg-img h1 {
+  margin: 0;
+  font-size: 3em;
+}
+
+.bg-img p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Estilos de logos */
+
+.logo2 {
+  max-width: 350px;
+}
+
+/* Estilos del header  */
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.header li {
+  display: inline;
+  font-size: 22px;
+  transition: all 0.2s;
+}
+.header a {
+  color: white;
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+.shoppingCart {
+  color: white;
+  padding: 0 10px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.header a:hover,
+.header li:hover {
+  color: var(--primary-color);
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* estilos del footer */
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 0;
+}
+
+footer ul {
+  list-style: none;
+  margin-top: -5px;
+  display: flex;
+}
+
+footer ul a {
+  padding: 0px 10px;
+  font-size: 28px;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+
+footer ul a:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+/* Estilos de las  cartas para valores y servicios */
+
+.card {
+  max-width: 30%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card i {
+  font-size: 4rem;
+}
+
+.card span {
+  font-weight: bold;
+  font-size: larger;
+}
+
+.card p {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
