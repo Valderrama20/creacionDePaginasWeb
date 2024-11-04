@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        // Variables
+        //  Es un contenedor que almacena un valor.
+        // el valor puede cambiar o actualizarse
+        //  Js: let, const, var
+        // declaracion (nombre de variable) instruccion
+
+
+        // let trabaja en bloque, la variable solo existe dentro del bloque donde 
+        // esta definida (funcion o ciclo)
+
+        let name = "Jose";
+
+        // name = "Pepe";
+
+        if (true) {
+            let edad = 25
+            console.log(name) // Jose
+        }
+
+        console.log(edad); // Error porque la variable esta definida dentro de un bloque y no esta a su alcance
+
+        // const
+        /*
+        Declara datos cuyo valor no puede ser reasignados una vez definidos
+        */
+
+        const PI = 3.1416;
+        // PI = 3.14; // Error porque no puede reasignar el valor
+
+        // var: forma antigua. variables globales o de funcion pero no
+        // en bloque. 
+
+        var edad = 30;
+        if (true) {
+            var edad = 40;
+            console.log(edad) // 40
+        }
+        console.log(edad) // muestra 40 ya que la var es global 
+
+        // Tipos de datos 
+
+        /*
+        Primitivos:
+
+        string: Cadenas de texto, entre comillas, simple o invertidas
+
+        number: valores numericos o decimales
+
+        boolean: valores true o false usados en formato de condiciones
+
+        undefined: variable declarada pero no inicializada (sin un valor)
+
+        null: valor inexistente
+        */
+
+        let texto = "hola";
+        let numero = 777;
+        let activo = true;
+        let indefinido;
+        let vacio = null
+
+        console.log(texto)
+        console.log(numero)
+        console.log(activo)
+        console.log(indefinido)
+        console.log(vacio)
+
+        // Datos tipo referencia
+
+        // object: Coleccion de pares clave-valor. los objectos son el nucleo 
+        // de la mayoria de estructuras de js 
+
+        let persona = {
+            name: "jose",
+            age: 21,
+            sexo: "otro"
+        }
+
+        // array: Lista ordenada de elementos accesibles por un indice
+
+        let numero2 = [1, 2, 3, 4, 5]
+        let abecedario = ["a", "b", "b"]
+
+
+        // Estructura de control
+
+        // como se desarrolla el flujo de ejecucion del programa
+        // en bloque, funciones, condiciones o repetciones
+
+        /*
+        CONDICIONALES:
+
+        (if, else if, else): Evaluan condicones y ejecutan el bloque de codigo en consecuencia
+        
+        */
+        let edad2 = 18
+        if (edad2 >= 18) {
+            console.log("eres mayor de edad2")
+        }
+        else if (edad2 >= 65) {
+            console.log("Eres muy viejo para esto")
+        }
+        else {
+            console.log("eres menor de edad2")
+        }
+
+        // Switch: Usa para comprarar un valor especifico en multiples casos
+
+        let day = 1;
+
+
+        switch (day) {
+            case 1: console.log("Lunes");
+                break
+            case 2: console.log("Martes");
+                break
+            case 3: console.log("Miercoles");
+                break
+            case 4: console.log("Jueves");
+                break
+            case 5: console.log("Viernes");
+                break
+        }
+
+        // Estructura tipo bucle: Ejecuta un bloque de codigo mutiples veces
+
+        // bucle tipo --> for
+
+        for (let i = 0; i < 5; i++) {
+            console.log(i)
+        }
+
+        // bucle tipo --> whle : EJecuta el bloque mientras que la condicion sea verdadera
+
+        let contador = 0
+
+        while (contador < 5) {
+            console.log(contador)
+            contador++
+        }
+
+
+        // Funciones 
+
+        /*
+        Encapsula bloques de codigos para que se ejecuten al ser llamadas
+        */
+
+        function saludar(name) {
+            return `Hola ${name}`
+        }
+
+        console.log(saludar("jose"))
+
+    </script>
+</body>
+
+</html>

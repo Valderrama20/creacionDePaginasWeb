@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayList</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Contenedor principal del reproductor -->
+    <div class="playContainer">
+        <h1>Mi Lista Favorita</h1>
+
+        <!-- Contenedor de la caratula de cla cancion y el nombre -->
+        <div class="coverContainer">
+            <img src="img/believer.webp" alt="Caratula" class="coverImage" id="cover">
+            <h2 id="songTitle">Seleccionar una cancion</h2>
+
+        </div>
+
+        <!-- Lista de canciones generadas dinamicamente en js -->
+
+        <ul id="playList"> </ul>
+
+        <!-- Elementos de audio para reproducir las canciones -->
+
+        <audio id="audioPlayer" hidden></audio>
+
+        <!-- Controles de reproduccion -->
+
+        <div class="controls">
+            <!-- Botones de reproduccion con codigos unicode -->
+            <button onclick="prevSong()">&#9198;</button> <!-- anterior -->
+            <button onclick="playPause()">&#9205;</button> <!-- play y pause -->
+            <button onclick="stopSong()">&#9209;</button> <!--stop -->
+            <button onclick="nextSong()">&#9197;</button> <!--siguiente -->
+
+            <!-- Barra de progreso (rango) -->
+            <input type="range" id="progressBar" value="0" max="100">
+            <!-- Mostrar el tiempo transcurrido y duracion total -->
+            <div class="timeInfo">
+                <span id="currentTime">
+                    0:00
+                </span>
+                --
+                <span id="totalTime">
+                    0:00
+                </span>
+
+            </div>
+
+            <!-- Control de volumen -->
+            <div class="volumeControl">
+                <label for="volumeSlider">Volumen:</label>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.5">
+            </div>
+        </div>
+        <!-- Contenedor de barras de vizualizacion -->
+        <div class="visualizer">
+            <div class="bar" style="background: linear-gradient(to top, rgb(255, 162, 0), yellow);"></div>
+            <div class="bar" style="background: linear-gradient(to top, rgb(0, 47, 255), rgb(106, 0, 255));"></div>
+            <div class="bar" style="background: linear-gradient(to top, rgb(0, 255, 242), rgb(0, 132, 255));"></div>
+        </div>
+    </div>
+    <!-- Archivo que controla la playList -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

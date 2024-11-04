@@ -1,0 +1,28 @@
+.menu {
+  display: flex;
+  list-style: none;
+  background-color: black;
+  padding: 0;
+}
+
+.menu li {
+  padding: 10px;
+  color: white;
+}
+
+.menu-vista {
+  display: none;
+}
+
+/* Tamaño de la pantalla al reducir */
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+  }
+
+  .menu-vista {
+    display: block;
+  }
+}
