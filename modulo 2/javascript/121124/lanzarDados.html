@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="valderrama20 - Jose garcia">
+    <title>Lanzar dados</title>
+</head>
+
+<body>
+    <label for="dado1">Dado 1</label>
+    <input type="text" id="dado1" name="dado1" disabled> <br>
+
+    <label for="dado2">Dado 2</label>
+    <input type="text" id="dado2" name="dado2" disabled>
+
+    <button onclick="iniciarLanzamiento()">Lanzar dados</button>
+
+    <script>
+
+        //      El objeto Math de JavaScript le permite realizar tareas matemáticas con números.
+        // A diferencia de otros objetos, el objeto Math no tiene constructor.
+        // El objeto Math es estático.
+        // Se pueden utilizar todos los métodos y propiedades sin crear primero un objeto Math.
+
+
+        // Lanzar 2 dados y mostrar la salida de cada tirada en 2 input.
+        // En los input mostrar el más alto y el más bajo
+
+        //función lanzar los dados
+        function lanzarDados() {
+            //crea un variable que calcule los lados del 1 dado de forma aleatoria
+            let valorDado = Math.ceil(Math.random() * 6)
+            //retorna ese valor
+            return valorDado
+        }
+
+        //crea una función iniciar el lanzamiento
+        let dadoContainer = document.getElementById("dado1")
+        let dadoContainer2 = document.getElementById("dado2")
+
+        function iniciarLanzamiento() {
+            dadoContainer.value = lanzarDados()
+            dadoContainer2.value = lanzarDados()
+        }
+
+
+        // let arr = new Array(12)
+
+
+
+
+
+    </script>
+</body>
+
+</html>
