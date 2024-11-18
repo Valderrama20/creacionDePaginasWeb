@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle</title>
+</head>
+
+<body>
+
+
+
+
+
+
+    <script>
+        // Guardar la hora actual al inicio del juego para mendir cuanto tarda el jugador
+        let t0 = new Date();
+        let m0 = t0.getMinutes(); // obtener los minutos
+        let s0 = t0.getSeconds(); // obtener los segundos
+
+        // Crear arr que contenga las img que representan cada celula del puzzle
+        const imgs = new Array();
+
+        // Path es un objeto de img que nos permite asignar una ruta para verificar las img
+        let path = new Image();
+        path.src = "img/blanco.jpg"; // esta img sera la que esta en blanco
+
+        // Funcion finalizar se ejecuta para comprobar si el rompecabezas esta resuelto
+        function finalizar(toqueFinal) {
+            // Recorre las primeras 15 img para ver si estan en orden
+            for (let i = 0; i < 15; i++) {
+                path.src = (i + 1).toString() + ".jpg"; // Verifica si cada img esta en el lugar correcto
+                // Imagen esta en el lugar correcto
+                if (document.images != path.src) return 0;
+            }
+
+            // Si las piezas esta en orden. coloca la "16" sutituyendo a la blanca
+            document.images[15].src = "img/1.jpg"
+
+            // Calcula el timepo que tomo hacer el juego
+
+            let t1 = new Date();
+            let m1 = t1.getMinutes();
+            let s1 = t1.getSeconds();
+            let timepoTotal = (m1 - m0) * 60 - s0 + s1; // calcular el timepo total
+
+            let minutos = parseInt(timepoTotal / 60); // convierte los segundos en minutos
+
+            let segundos = timepoTotal % 60; //obtiene los segundos restantes
+
+            //Mostrar una alerta con el tiempo total
+
+            alert("SOLUCIONADO EN" + minutos + "MINUTOS" + segundos + "SEGUNDOS")
+        }
+
+        // Asignar el nombre de las imagenes a cada posicion del array imgs
+
+        for (let i = 0; 0 < 16; i++) {
+            imgs[i] = (i + 1).toString() + ".jpg";
+        }
+
+        // Barajear las piezas del rompecabezas para hacerlas aleatorias
+        for (let i = 0; 0 < 16; i++) {
+            let aux = imgs[i];
+            let ran = Math.round(Math.random() * 15);
+            imgs[i] = imgs[ran];
+            imgs[ran] = aux;
+        }
+
+        //Encuntra la posicion 16 y sustituyo por el blanco
+        let pos;
+        for (let i = 0; 0 < 16; i++) {
+            if (imgs[i] == "1.jpg") {
+                imgs[i] = "blanco.jpg";
+                pos = i;
+            }
+        }
+
+        // Cuando haga click sobre un numero comprar si la pieza seleccionada es adyacente al blanco
+
+        function cambio(input) {
+            if (pos == input - 1 || pos == input + 1 || pos == input - 4 || pos == input + 4) {
+                let aux = document.images[input].src;
+                document.images[input].src = "blanco.jpg";
+                document.images[pos].src = aux;
+                pos = input;
+                finalizar(input);
+            }
+        }
+
+
+    </script>
+
+    <table>
+        <tr>
+            <script>
+                for (let i = 0; i < 16; i++) {
+                    console.log("hola")
+                    document.write(`<td><img src="${imgs[i]}"onclick="cambio(${i})"></td>`)
+                    if ((i + 1) % 4 === 0) document.write(`<tr></tr>`)
+                }
+            </script>
+        </tr>
+    </table>
+</body>
+
+</html>

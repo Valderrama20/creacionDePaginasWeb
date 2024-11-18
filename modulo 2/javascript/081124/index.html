@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio avanzado</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            cursor: pointer;
+            text-align: center;
+            align-content: center;
+            background-color: black;
+            color: white;
+        }
+
+        p {
+            font-size: 100px;
+        }
+    </style>
+</head>
+
+<body id="containerPrincipal">
+
+    <p id="contador">Contador: 0</p>
+
+    <script>
+        const closure = () => {
+            let contador = 0
+            return () => document.getElementById("contador").textContent = `Contador: ${++contador}`
+        }
+        const action = closure()
+
+        document.getElementById("containerPrincipal").addEventListener("click", action)
+
+
+
+    </script>
+</body>
+
+</html>

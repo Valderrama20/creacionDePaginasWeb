@@ -1,0 +1,29 @@
+
+
+
+Paso 1: 
+
+- Definir las variables y las cargas de la img
+
+- Guarda la fecha y hora cunado se inicia el juego
+
+- ALmacena los minutos y segundos para calcular el tiempo final
+
+- imgs es el array que contiene los nombres de las imagenes (de 1 al 15)
+
+- path es una variable que se utiliza para actualizar la ruta de la img
+
+paso 2
+
+ - Comprueba si las imagenes estan ordenadas del 1 al 15 en cuadricula 
+
+ - Si estan ordenadas muestra la img 15 en el espacio en blanco
+
+ - Calcule el tiomepo trascurrido desde el inicio 
+
+ - muestre l mensaje del tiempo total en minutos y segundos
+
+paso 3
+
+ - Con ele primer ciclo for el codigo asinga los nombres a la img del array
+  

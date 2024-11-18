@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="valderrama20 - Jose garcia">
+    <meta name="author" content="valderrama20 - Jose Garcia">
     <title>Lanzar dados</title>
 </head>
 
@@ -17,41 +17,53 @@
 
     <button onclick="iniciarLanzamiento()">Lanzar dados</button>
 
+    <ul id="resultados">
+
+    </ul>
+
+
     <script>
-
-        //      El objeto Math de JavaScript le permite realizar tareas matemáticas con números.
-        // A diferencia de otros objetos, el objeto Math no tiene constructor.
-        // El objeto Math es estático.
-        // Se pueden utilizar todos los métodos y propiedades sin crear primero un objeto Math.
-
-
-        // Lanzar 2 dados y mostrar la salida de cada tirada en 2 input.
-        // En los input mostrar el más alto y el más bajo
-
         //función lanzar los dados
         function lanzarDados() {
-            //crea un variable que calcule los lados del 1 dado de forma aleatoria
+            //crea un variable que calcule los lados del dado de forma aleatoria
             let valorDado = Math.ceil(Math.random() * 6)
             //retorna ese valor
             return valorDado
         }
 
-        //crea una función iniciar el lanzamiento
+        // Traer los inputs para mostrar el resultado 
+        // y la lista no ordenada para las estadisticas
         let dadoContainer = document.getElementById("dado1")
         let dadoContainer2 = document.getElementById("dado2")
+        let ul = document.getElementById("resultados")
 
+        // Crea un arr con 12 posiciones con el valor 0
+        const arrayEstadisticas = new Array(13).fill(0)
+
+        //crea una función principal
         function iniciarLanzamiento() {
-            dadoContainer.value = lanzarDados()
-            dadoContainer2.value = lanzarDados()
+            // Limpiar estadisticas
+            ul.innerHTML = ""
+            // Limpiar consola
+            console.clear()
+
+            let dadoA = lanzarDados()
+            let dadoB = lanzarDados()
+
+            console.log("La suma de los dados es: ", dadoA + dadoB)
+            arrayEstadisticas[dadoA + dadoB]++
+
+            // Asignar valores a los inputs
+            dadoContainer.value = dadoA
+            dadoContainer2.value = dadoB
+
+            // Recorrer las estadisticas y mostrarlas
+            for (let i = 2; i <= 12; i++) {
+                let li = document.createElement("li")
+                li.textContent = `El numero "${i}" salio: ${arrayEstadisticas[i]} veces`
+                ul.appendChild(li)
+            }
         }
-
-
-        // let arr = new Array(12)
-
-
-
-
-
     </script>
 </body>
 

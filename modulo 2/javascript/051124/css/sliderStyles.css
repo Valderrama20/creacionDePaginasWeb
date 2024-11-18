@@ -1,0 +1,103 @@
+/* Aplicar una norma para que todos los elementos de padding y border por defecto
+no afecten a los otros elementos del css */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Contenedor principal del slider */
+.sliderShowContainer {
+  max-width: 1000px; /*Ancho maximo del contenedor*/
+  position: relative; /* Posicionamos los elementos detro del contenedor de forma relativa */
+  margin: auto; /* centramos el contenedor horizontalmente en la maquina */
+}
+
+/* ocultamos la imagenes por defecto */
+.mySlider {
+  display: none;
+  position: relative; /*No se muestran las diapositivas hasta que se activen*/
+}
+
+/* Botones de anterior y siguiente para navegar */
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px; /*Para que se ajuste y se centre vertical mente*/
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.2s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none; /*evita que el texto sea seleccionable*/
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  color: white;
+  background-color: black;
+}
+
+.textBottom {
+  color: aliceblue;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.numberText {
+  color: blueviolet;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dotContainer {
+  margin: 20px 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50px;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+img {
+  height: 600px;
+}
