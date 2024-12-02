@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="valderrama20">
+    <title>Validar Nombre</title>
+</head>
+
+<body>
+    <form>
+        <label for="name">Nombre</label>
+        <input type="text" id="name" placeholder="Ingrese Su Nombre" required>
+        <button type="button" onclick="validateName();">Enviar fecha</button>
+        <p id="result"></p>
+    </form>
+
+    <script>
+        function validateName() {
+            let name = document.getElementById("name").value.trim();
+            let result = document.getElementById("result");
+            let ragex = /^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(?:\s[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*$/;
+
+            result.textContent = !ragex.test(name) ? "El nombres no es valido" : `Nombre validado: ${name}`
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query</title>
+    <style>
+        body {
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Comparativa entre query selector y getElement</h1>
+
+    <h2 id="titulo">Buenos dias people</h2>
+
+    <p class="parrafo">Parrafo con clase </p>
+    <p class="parrafo">Otro parrafo con las misma clase </p>
+
+    <button id="boton">cambiar estilos</button>
+
+    <script>
+        //   Seleccionar usando getElementById
+
+        let titulo = document.getElementById("titulo");
+
+        titulo.style.color = "blue";
+        titulo.textContent = "Texto modificado por getElementById"
+
+        // Selecionar usando querySelector (se puede seleccioanr cualquier elemento css)
+
+        let primerParrafo = document.querySelector(".parrafo");
+        primerParrafo.style.color = "green"
+        primerParrafo.textContent = "texto modificado por querySelector"
+
+        // Sleecioar multiples elementos con getElementsByClassName
+
+        let parrafos = document.getElementsByClassName("parrafo");
+
+        for (let i = 0; i < parrafos.length; i++) {
+            parrafos[i].style.fontSize = "10px";
+        }
+
+        // Selecionar multiples elementos con querySelectorAll (node list)
+
+        let parrafosQuery = document.querySelectorAll(".parrafo");
+        parrafosQuery.forEach((parrafo, index) => {
+            parrafo.style.backgroundColor = index % 2 === 0 ? "lightgray" : "lightyellow";
+        })
+
+        // Añadir un evento al boton 
+
+        let boton = document.querySelector("#boton")
+        boton.addEventListener("click", () => {
+            alert("haz hecho clic en el boton")
+        })
+
+    </script>
+</body>
+
+</html>

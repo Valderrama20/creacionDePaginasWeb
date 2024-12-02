@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caculadora de descuentos</title>
+</head>
+
+<body>
+    <form>
+        <label for="totalPrice">Precio Total</label>
+        <input id="totalPrice" type="number">
+        <br>
+        <label for="discount">Descuento</label>
+        <input id="discount" type="number">
+        <input type="text" id="result" disabled>
+        <button type="button" onclick="calculateDiscount()">Calcular descuento</button>
+    </form>
+    <script>
+        const aplicarDescuento = (totalPrice, discount) => totalPrice - (totalPrice * (discount / 100))
+
+        const calculateDiscount = () => {
+            let totalPrice = document.getElementById("totalPrice")
+            let discountValue = document.getElementById("discount")
+            let result = document.getElementById("result")
+
+            result.value = `Descuento total: ${aplicarDescuento(totalPrice.value, discountValue.value)} €`
+        }
+    </script>
+</body>
+
+</html>

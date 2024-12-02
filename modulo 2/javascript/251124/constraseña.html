@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de contraseña</title>
+</head>
+
+<body>
+    <h1>Generador de contraseña</h1>
+
+    <form onsubmit="event.preventDefault(); generarPassword()">
+
+
+        <label>Longitu de la contraseña <input type="number" id="longitud" required></label>
+        <br><br>
+        <button type="submit">Generar contraseña</button>
+
+        <p id="resultado"></p>
+    </form>
+
+    <script>
+        function generarPassword() {
+            // obtener la longitud indicada por el usuario
+
+            let longitud = parseInt(document.getElementById("longitud").value);
+
+            // valido la longitud
+            if (isNaN(longitud) || longitud <= 0) {
+                alert("Por favor ingresa un numero valido")
+                return
+            }
+
+            // Caracteres disponibles para la contraseña 
+            const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*-"
+            let contraseña = ""
+            while (contraseña.length < longitud) {
+                let indexAleatorio = Math.floor(Math.random() * characters.length)
+                contraseña += characters[indexAleatorio]
+            }
+
+            document.getElementById("resultado").textContent = `Tu Contraseña es : ${contraseña}`
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar fecha</title>
+</head>
+
+<body>
+    <h1>Validar fecha</h1>
+    <form onsubmit="validarFecha();event.preventDefault();">
+        <label for="fecha">FECHA (DD/MM/AAAA):</label>
+        <input type="text" id="fecha" placeholder="27/11/2024" required>
+        <button type="submit">Validar Fecha</button>
+    </form>
+
+    <p id="solucion"></p>
+
+    <script>
+        function validarFecha() {
+            let fecha = document.getElementById("fecha").value;
+            let resultado = document.getElementById("solucion")
+            //variable patron
+            let regex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/;
+            if (!regex.test(fecha)) {
+                resultado.textContent = "Fecha no Válida";
+                return;
+            }
+
+            let [dia, mes, year] = fecha.split("/").map(Number); //28/12/2025
+            let fechaObj = new Date(year, mes - 1, dia);
+            let solucion = (fechaObj.getDate() === dia &&
+                fechaObj.getMonth() === mes - 1 &&
+                fechaObj.getFullYear() === year)
+                ? "Fecha Válida"
+                : "Fecha no Válida";
+            resultado.textContent = solucion;
+        }
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

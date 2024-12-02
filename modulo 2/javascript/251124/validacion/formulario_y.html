@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <h1>Registro</h1>
+
+    <form id="registrationForm">
+        <label for="name">Nombre</label>
+        <input type="text" name="name" id="name" placeholder="Escribe tu nombre">
+        <div class="error" id="nameError"></div>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="ejemplo@gmail.com">
+        <div class="error" id="emailError"></div>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Crea una contraseña">
+        <div class="error" id="passwordError"></div>
+
+        <button type="submit">Enviar</button>
+        <button type="reset" onclick="clearForm()">Borrar</button>
+    </form>
+
+
+    <script>
+
+        const inputs = [{
+            id: "name",
+            validation: (value) => value === "",
+            errorMessage: "El email es obligatorio",
+            errorContent: document.getElementById("nameError")
+        },
+        {
+            id: "email",
+            validation: (value) => value === "",
+            errorMessage: "Ingrese un email valido",
+            errorContent: document.getElementById("emailError")
+        },
+        {
+            id: "password",
+            validation: (value) => value === "" || value.length < 6,
+            errorMessage: "ingrese una contraseña valida",
+            errorContent: document.getElementById("passwordError")
+        }
+        ]
+
+        document.getElementById("registrationForm").addEventListener("submit", (event) => {
+            //   Para evitar que el formulario se enviar de forma automatica utilizamos el preventDefault() 
+
+            event.preventDefault();
+            let isValid = true;
+
+            // validar campos
+
+            for (const { id, validation, errorMessage, errorContent } of inputs) {
+                let value = document.getElementById(id).value.trim()
+                if (validation(value)) {
+                    errorContent.textContent = errorMessage
+                    isValid = false
+                } else {
+                    errorContent.textContent = ""
+                }
+            }
+
+            // Si todos los campos son validos se envia el formulario
+            if (isValid) {
+                alert("Enviado exitosamente")
+            }
+        })
+
+        // Limpiar los mensajes de errores
+
+        const clearForm = () => inputs.forEach(input => input.errorContent.textContent = "");
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="valderrama20">
+    <title>Contar las palabras</title>
+</head>
+<!-- formulario que tenga un textarea donde pueda escribir el usuario
+un botón para llamar a la función contar las palabras
+un párrafo donde se muestra el resultado de contar las palabras
+función contar las palabras
+variable que recoja las palabras y no haya espacios vacíos
+variable que luego modifique el párrafo 
+if que no haya espacios vacíos
+variable del párrafo que emita el text ”texto vacio”
+cambiarle el color a ese text rojo
+else
+La variable palabras usando el método split en JavaScript divide una cadena en un array de subcadenas utilizando un separador especificado. En el caso de text.split(/\s+/), se usa una expresión regular como separador.
+let palabras = texto.split(/\s+/)
+si es correcto escribir en el documento  la cantidad de palabras llamado a la variable
+cambiarle el color a ese text verde -->
+
+<body>
+    <form>
+        <textarea name="palabras" id="palabras"></textarea>
+        <button type="button" onclick="contarPalabras()">Contar Palabras</button>
+        <p id="resultado"></p>
+    </form>
+
+    <script>
+        function contarPalabras() {
+            let palabras = document.getElementById("palabras").value.trim();
+            let resultado = document.getElementById("resultado");
+            let response = ""
+
+            if (palabras === "") {
+                resultado.style.color = "red";
+                response = "No puede estar vacio";
+            } else {
+                let contarPalabras = palabras.split(/\s+/).length;
+                resultado.style.color = "green";
+                response = `EL total de palabras es: ${contarPalabras}`;
+            }
+            resultado.textContent = response;
+        }
+    </script>
+</body>
+
+</html>

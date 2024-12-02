@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="valderrama20">
+    <title>Validación correo electrónico</title>
+</head>
+
+<body>
+    <form onsubmit="return validarFormulario()">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        function validarFormulario() {
+            const emailValue = document.getElementById("email").value.trim();
+            const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+            if (!regex.test(emailValue)) {
+                alert("El Email no es valido");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>

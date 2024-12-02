@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas</title>
+    <script>
+        // Array con las tareas predefinidas
+
+        let tasks = ["Comprar comida", "Estudiar JS", "Llamar a un amigo", "Limpiar la casa", "Ir al GYM"]
+
+
+        const showTasks = () => {
+            let lista = document.getElementById("taskList");
+
+            lista.innerHTML = ""
+
+            tasks.forEach((task, index) => {
+                let li = document.createElement("li");
+
+                // Texto de la tarea
+
+                let textTask = document.createElement("span");
+                textTask.textContent = task
+
+                // boton para eliminar la tarea realizada
+                let deleteButton = document.createElement("button");
+                deleteButton.textContent = "Borrar";
+                deleteButton.style.marginLeft = "18px";
+                deleteButton.onclick = () => deleteTask(index);
+
+                li.appendChild(textTask);
+                li.appendChild(deleteButton);
+                lista.appendChild(li)
+            })
+        }
+
+        function addTask(event) {
+            event.preventDefault();
+            let newTask = document.getElementById("newTask").value.trim()
+
+            if (newTask) {
+                tasks.push(newTask)
+                document.getElementById("newTask").value = "";
+                showTasks();
+            } else {
+                alert("Por favor, escribe una tarea antes de agregar")
+            }
+        }
+
+        function deleteTask(index) {
+            tasks.splice(index, 1);
+            showTasks();
+        }
+
+        globalThis.onload = () => showTasks()
+
+    </script>
+</head>
+
+<body>
+    <ul id="taskList">
+
+    </ul>
+
+    <h2>Agregar nueva tarea</h2>
+    <form onsubmit="addTask(event)">
+        <input type="text" id="newTask" placeholder="Agrega una tarea">
+        <button type="submit">Crear tarea</button>
+    </form>
+</body>
+
+</html>

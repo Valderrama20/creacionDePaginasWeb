@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="valderrama20">
+    <title>Validacion Campo Vacio</title>
+</head>
+
+<body>
+    <h2>Formulario de Contacto</h2>
+    <form onsubmit="return validarFormulario()">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        function validarFormulario() {
+            const nombre = document.getElementById("nombre").value.trim();
+
+            if (nombre === "") {
+                alert("El nombre es obligatorio");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>
