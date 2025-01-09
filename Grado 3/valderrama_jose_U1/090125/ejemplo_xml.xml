@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<biblioteca>
+
+<libro>
+   <titulo>Cien Años de Soledad </titulo>
+   <autor>Garcia Marquez</autor>
+   <isbn>000000</isbn>
+   <editorial>Planeta</editorial>
+</libro>
+<revista>
+</revista>
+
+</biblioteca>

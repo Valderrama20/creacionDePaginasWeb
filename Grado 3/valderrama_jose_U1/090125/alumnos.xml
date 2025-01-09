@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<alumnos>
+
+<alumno id="1">
+   <nombre></nombre>
+   <apellido></apellido>
+   <edad></edad>
+   <email></email>
+</alumno>
+
+<alumno id="2">
+   <nombre></nombre>
+   <apellido></apellido>
+   <edad></edad>
+   <email></email>
+</alumno>
+
+<alumno id="3">
+   <nombre></nombre>
+   <apellido></apellido>
+   <edad></edad>
+   <email></email>
+</alumno>
+
+
+</alumnos>

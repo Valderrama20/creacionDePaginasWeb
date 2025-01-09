@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<coches>
+
+    <coche id="1">
+        <fabricante>Toyota</fabricante>
+        <modelo>Hiluz</modelo>
+        <año>2004</año>
+        <especificaciones>
+            <motor>2.5L</motor>
+            <potencion>200cv</potencion>
+            <trasmision>Manual</trasmision>
+            <consumo_ciudad>8.4 L/100km</consumo_ciudad>
+            <consumo_carretera>6.4 L/100km</consumo_carretera>
+        </especificaciones>
+        <precio moneda="€">24000</precio>
+        <disponibilidad>true</disponibilidad>
+    </coche>
+
+    <coche id="2">
+        <fabricante>Toyota</fabricante>
+        <modelo>Corolla</modelo>
+        <año>2024</año>
+        <especificaciones>
+            <motor>1.8L Híbrido</motor>
+            <potencion>122 CV</potencion>
+            <trasmision>Automática</trasmision>
+            <consumo_ciudad>4.5 L/100km</consumo_ciudad>
+            <consumo_carretera>4.0 L/100km</consumo_carretera>
+        </especificaciones>
+        <precio moneda="€">23500</precio>
+        <disponibilidad>true</disponibilidad>
+    </coche>
+
+    <coche id="3">
+        <fabricante>BMW</fabricante>
+        <modelo>Serie 3</modelo>
+        <año>2023</año>
+        <especificaciones>
+            <motor>2.0L Turbo</motor>
+            <potencion>255 CV</potencion>
+            <trasmision>Automática de 8 marchas</trasmision>
+            <consumo_ciudad>7.3 L/100km</consumo_ciudad>
+            <consumo_carretera>5.4 L/100km</consumo_carretera>
+        </especificaciones>
+        <precio moneda="€">45000</precio>
+        <disponibilidad>true</disponibilidad>
+    </coche>
+
+
+</coches>

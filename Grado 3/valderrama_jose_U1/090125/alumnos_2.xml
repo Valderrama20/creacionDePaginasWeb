@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<alumnos curso="1" titulacion="sistemas">
+    <alumno>
+        <matricula>2025001</matricula>
+        <nombre>Jose</nombre>
+        <apellido>Garcia</apellido>
+        <edad>22</edad>
+        <grado>Ingenieria en sistemas</grado>
+        <telefono>+34643328564</telefono>
+        <email>jose23122009@gmail.com</email>
+    </alumno>
+    <alumno>
+        <matricula>2025002</matricula>
+        <nombre>Juan</nombre>
+        <apellido>Peres</apellido>
+        <edad>28</edad>
+        <grado>Biologia</grado>
+        <telefono>+34643523535</telefono>
+        <email>elmalo@gmail.com</email>
+    </alumno>
+</alumnos>
