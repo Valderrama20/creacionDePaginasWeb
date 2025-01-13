@@ -1,0 +1,76 @@
+/* resetear los estilos por defecto */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: #444;
+}
+
+header p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fix, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.imgContenedor {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0,0.2);
+    transition:  0.3s ease;
+}
+
+.imgContenedor img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.imgContenedor:hover {
+    transform: scale(1.02);
+}
+
+.imgContenedor:hover img {
+    transform: scale(1.2);
+    filter: brightness(0.5);
+}
+
+.pieFoto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0,0.8);
+    color:  white;
+    padding: 10px;
+    font-size: 1rem;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.imgContenedor:hover .pieFoto{
+ opacity: 1;
+ transform: translateY(0);
+}

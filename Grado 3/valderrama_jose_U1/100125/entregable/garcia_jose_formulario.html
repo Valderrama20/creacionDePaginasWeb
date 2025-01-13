@@ -1,0 +1,107 @@
+<!-- 
+Formulario que recopile los datos del usuario utilizando  los elementos y atributos disponibles
+implementa funcionalidades como validación de los campos, control límites y formatos. botón de resetear y enviar
+nombre
+correo
+contraseña
+edad
+fecha de nacimiento
+teléfono
+subir foto
+genero
+deportes que practica selección múltiple
+país
+comentarios (máximo de 500)
+apellido_nombre_formulario.pdf 
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jose Garcia - Valderrama20">
+    <title>Fomulario</title>
+</head>
+
+<body>
+    <form>
+        <!-- Nombre del usuario -->
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" placeholder="Nombre" required>
+        <br>
+
+        <!-- Email del usuario -->
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Correo" required>
+        <br>
+    
+        <!-- Contraseña del usuario -->
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" placeholder="Contraseña" required>
+        <br>
+         
+        <!-- edad del usuario -->
+        <label for="age">Edad</label>
+        <input type="number" id="age" name="age" placeholder="edad" required>
+        <br> 
+         
+        <!-- fecha de nacimiento del usuario -->
+        <label for="date">Fecha de nacimiento</label>
+        <input type="date" id="date" name="date" placeholder="Fecha de nacimiento" required>
+        <br>
+         
+        <!-- Numero de telefono del usuario -->
+        <label for="phone">Numero de telefono</label>
+        <input type="tel" id="phone" name="phone" placeholder="Numero de telefono" pattern="[0-9]{10}" required>
+        <br>
+        
+        <!-- foto que sube el usuario -->
+        <label for="picture">Subir foto</label>
+        <br>
+        <input type="file" id="picture" name="picture" required>
+        <br>
+
+        <!-- Genero del usuaripo -->
+        <label>Genero</label>
+        <br>
+        <label for="maculino">Masculino</label>
+        <input type="radio" id="maculino" name="genero" value="maculino" required>
+        <label for="femenino">Femenino</label>
+        <input type="radio" id="femenino" name="genero" value="femenino" required>
+        <br>
+         
+        <!-- deporte del usuario -->
+        <label for="sports">Deportes</label>
+        <br>
+        <select name="sports" id="sports" multiple required>
+            <option value="futbolt">futbolt</option>
+            <option value="karate">karate</option>
+            <option value="boxeo">boxeo</option>
+        </select>
+        <br>
+
+        <!-- ciudad del usuario -->
+        <label for="country">Ciudad</label>
+        <select name="country" id="country" required>
+            <option value="españa">españa</option>
+            <option value="suiza">suiza</option>
+            <option value="italia">italia</option>
+        </select>
+        <br>
+
+        <!-- comentario del usuario -->
+        <label for="comentary">Comentario</label>
+        <br>
+        <textarea name="comentary" id="comentary" maxlength="500" rows="5" cols="40" placeholder="Escribe tu comentario aqui..." required></textarea>
+        <br>
+
+        <!-- boton para enviar el formulario -->
+        <button type="submit">Enviar formulario</button>
+        <button type="reset">Borrar formulario</button>
+    </form>
+
+</body>
+
+</html>

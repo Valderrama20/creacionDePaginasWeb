@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efectos color</title>
+    <style>
+        .colorBox {
+            width: 200px;
+            height: 100px;
+            margin: 20px;
+            display: inline-block;
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .colorBox:hover {
+            opacity: 0.8;
+            transform: scale(1.2);
+        }
+
+        /* Color por nombre */
+        .nombreColor {
+            background-color: green;
+        }
+
+        .rgbColor {
+            background-color: rgb(127, 255, 212);
+        }
+
+        .rgbaColor {
+            background-color: rgba(157, 0, 255, 1);
+        }
+
+        .hexColor {
+            background-color: #40ff00;
+        }
+
+        .hslColor {
+            background-color: hsl(227, 100%, 50%);
+        }
+
+        .hslaColor {
+            background-color: hsla(0, 100%, 50%,1);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Prueba de colores cambiantes</h2>
+    <div class="colorBox nombreColor">Color: verde</div>
+    <div class="colorBox rgbColor">Color: RGB</div>
+    <div class="colorBox rgbaColor">Color: RGBA</div>
+    <div class="colorBox hexColor">Color: hexadecimal</div>
+    <div class="colorBox hslColor">Color: HSA</div>
+    <div class="colorBox hslaColor">Color: HSLA</div>
+</body>
+
+</html>
