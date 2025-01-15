@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Medidas en CSS</title>
+    <style>
+        /* Unidades Absolutas */
+        /* px: Unidad fija de píxeles */
+        .px-box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+        }
+
+        /* cm: Centímetros */
+        .cm-box {
+            width: 5cm;
+            height: 2cm;
+            background-color: lightcoral;
+        }
+
+        /* mm: Milímetros */
+        .mm-box {
+            width: 50mm;
+            height: 20mm;
+            background-color: lightgreen;
+        }
+
+        /* in: Pulgadas */
+        .in-box {
+            width: 2in;
+            height: 1in;
+            background-color: lightgoldenrodyellow;
+        }
+
+        /* pt: Puntos (1pt = 1/72 pulgadas) */
+        .pt-box {
+            width: 72pt; /* Equivale a 1 pulgada */
+            height: 36pt;
+            background-color: lightpink;
+        }
+
+        /* pc: Picas (1pc = 12pt) */
+        .pc-box {
+            width: 6pc; /* Equivale a 72pt */
+            height: 3pc;
+            background-color: lightgray;
+        }
+
+        /* Unidades Relativas */
+        /* %: Porcentaje relativo al contenedor padre */
+        .percent-box {
+            width: 50%; /* 50% del contenedor */
+            height: 50%;
+            background-color: lightsalmon;
+        }
+
+        /* em: Relativo al tamaño de fuente del elemento padre */
+        .em-box {
+            font-size: 16px; /* Tamaño base */
+            width: 10em; /* 10 veces el tamaño de la fuente */
+            height: 5em;
+            background-color: lightseagreen;
+        }
+
+        /* rem: Relativo al tamaño de la fuente raíz (html) */
+        .rem-box {
+            font-size: 16px;
+            width: 10rem; /* 10 veces el tamaño de la fuente raíz */
+            height: 5rem;
+            background-color: lightsteelblue;
+        }
+
+        /* vw: 1vw es 1% del ancho de la ventana */
+        .vw-box {
+            width: 50vw;
+            height: 20vw;
+            background-color: lightyellow;
+        }
+
+        /* vh: 1vh es 1% del alto de la ventana */
+        .vh-box {
+            width: 50vh;
+            height: 20vh;
+            background-color: lightcyan;
+        }
+
+        /* vmin: El menor valor entre vw y vh */
+        .vmin-box {
+            width: 20vmin;
+            height: 10vmin;
+            background-color: lightgoldenrod;
+        }
+
+        /* vmax: El mayor valor entre vw y vh */
+        .vmax-box {
+            width: 20vmax;
+            height: 10vmax;
+            background-color: lightcoral;
+        }
+
+        /* ex: Altura de la letra "x" en la fuente actual */
+        .ex-box {
+            font-size: 16px; /* Tamaño base */
+            width: 20ex;
+            height: 10ex;
+            background-color: lightskyblue;
+        }
+
+        /* ch: Ancho del carácter "0" en la fuente actual */
+        .ch-box {
+            font-size: 16px; /* Tamaño base */
+            width: 30ch;
+            height: 15ch;
+            background-color: lightgreen;
+        }
+
+        /* lh: Altura de línea relativa al texto */
+        .lh-box {
+            line-height: 2; /* Doble del tamaño de la fuente */
+            width: 20lh;
+            height: 10lh;
+            background-color: lightsalmon;
+        }
+
+        /* fr: Fracciones del espacio disponible (Grid) */
+        .fr-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr; /* Primera columna: 1 fracción, segunda: 2 fracciones */
+            gap: 10px;
+        }
+        .fr-box {
+            background-color: lightblue;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Tipos de unidades. Absolutas y relativas
+      
+    Absolutas fijas y no cambian segun el entorno o el dispositivo
+
+    px -> pixeles (unidad mas comun)
+    cm -> centimetros
+    mm -> milimetros
+    in -> pulgadas
+    pt -> puntos (1pt = 1/72 pulgadas)
+    pc -> Picas (1pc = 12px)
+
+    Relactivas se adaptan al contexto (tamaño de funte, pantalla, etc)
+
+    % -> Porcentaje (relativo al elemento contenedor)
+    em -> Relativo al tamaño de fuente del elemento padre
+    rem -> relativo al tamaño de la fuente del elemento raiz (html)
+    vw -> Viewport with (1wv = 1% del ancho de la ventana)
+    wh -> Viewport height (1vh = 1% del alto de la ventana)
+    vmin -> EL valor mas pequeño entre entre vw y vh
+    vmax -> Sera el valor mas grande entre vw y vh
+    ex -> Altura de la letra de la letra "x" entre la fuente actual
+    ch -> Anchura con respecto al cero "0" de la fuente actual
+    lh -> Altura de linea del texto actual
+     
+    Unidades especiales (css grid/flex)
+
+    fr -> Fraccion del espacio disponible en un contenedor (grid)
+    -->
+    <h1>Ejemplos de Medidas en CSS</h1>
+    
+    <!-- Unidades Absolutas -->
+    <div class="px-box">px: Píxeles</div>
+    <div class="cm-box">cm: Centímetros</div>
+    <div class="mm-box">mm: Milímetros</div>
+    <div class="in-box">in: Pulgadas</div>
+    <div class="pt-box">pt: Puntos</div>
+    <div class="pc-box">pc: Picas</div>
+    
+    <!-- Unidades Relativas -->
+    <div class="percent-box">%: Porcentaje</div>
+    <div class="em-box">em: Relativo al padre</div>
+    <div class="rem-box">rem: Relativo a la raíz</div>
+    <div class="vw-box">vw: Viewport Width</div>
+    <div class="vh-box">vh: Viewport Height</div>
+    <div class="vmin-box">vmin: Más pequeño entre vw y vh</div>
+    <div class="vmax-box">vmax: Más grande entre vw y vh</div>
+    <div class="ex-box">ex: Altura de la letra "x"</div>
+    <div class="ch-box">ch: Ancho del carácter "0"</div>
+    <div class="lh-box">lh: Altura de línea</div>
+
+    <!-- Unidades Grid (fr) -->
+    <div class="fr-container">
+        <div class="fr-box">1fr</div>
+        <div class="fr-box">2fr</div>
+    </div>
+</body>
+</html>

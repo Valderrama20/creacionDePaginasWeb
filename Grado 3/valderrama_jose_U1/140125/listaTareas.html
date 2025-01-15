@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Creamos el html -->
+
+    <div id="todoApp" class="contenedor">
+        <h1 class="titulo">lista de tareas</h1>
+        <ul id="todoList" class="todoList">
+            <li class="todo" data-id="1">tarea 1
+                <button class="deleteBtn" data-action="eliminar">eliminar</button>
+            </li>
+            <li class="todo" data-id="2">tarea 2
+                <button class="deleteBtn" data-action="eliminar">eliminar</button>
+            </li>
+            <li class="todo" data-id="3">tarea 3
+                <button class="deleteBtn" data-action="eliminar">eliminar</button>
+            </li>
+        </ul>
+        <input type="text" id="nuevaTareaEntrada" placeholder="Nueva tarea ">
+        <button class="addTodo" id="botonNuevaTarea">Agregar tarea</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
