@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svg casa y barco</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+
+        }
+
+        .svg-container {
+            width: 40%;
+            border: 2px solid black
+        }
+    </style>
+</head>
+<body>
+<!-- casa en svg -->
+ <!-- importar la libreia xml que me permiten organizar los vectores -->
+  <div class="svg-container">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" xmlns:xlink="http://www.w3.org/1999/xlink">
+   
+        <!-- Base de la caja -->
+        <rect x="50" y="80" width="100" height="70" fill="#8b4513"/>
+        <!-- Techo -->
+        <polygon points="50, 80, 100, 40 150, 80" fill="brown" />
+        <!-- Puerta -->
+        <rect x="90" y="110" width="20" height="40" />
+        <!-- Ventanas -->
+        <rect x="60" y="90" width="20" height="40" fill="#add8e6 "/>
+        <rect x="120" y="90" width="20" height="40" fill="#add8e6 "/>
+
+        <!-- Chimenea -->
+        <rect x="120" y="45" width="10" height="30" fill="#8b0000 "/>
+        
+
+
+    </svg>
+  </div>
+
+</body>
+</html>
