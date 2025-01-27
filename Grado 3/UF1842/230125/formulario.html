@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form onsubmit="logIn(this)">
+        <div>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" required>
+            <div id="emailError"></div>
+        </div>
+        <div>
+            <label for="password">Contraseña</label>
+            <input type="text" id="password" name="password" required>
+            <div id="passwordError"></div>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+
+    <script>
+
+        function logIn(e) {
+            e.preventDefault()
+            const emailInput = document.getElementById("email");
+            const passwordInput = document.getElementById("password");
+
+            if (emailInput.value) {
+                console.log(emailInput.value)
+            }
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

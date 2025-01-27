@@ -1,0 +1,22 @@
+
+--------- Creacion de fomulario ----------
+
+paso 1: 
+
+variables a utilizar:
+nameInput, emailInput, passwordInput.09.
+-- todos los campos van a ser requeridos
+-- vamos a tener una button y una validacion la hacer submit
+
+paso 2: 
+
+getUserData: Esta funcion la utilizaremos para obtener los datos del usuario
+-- aqui vamos a validar
+
+paso 3: 
+
+validateUserData: esta funcion la utilizamores para validar la informacion introducida
+
+paso 4: 
+
+onSubmit: este sera el evento esperado para Ejecutar la obtencion de datos, validacion y visualizacion

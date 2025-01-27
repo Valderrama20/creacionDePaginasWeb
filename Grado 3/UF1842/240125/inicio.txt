@@ -1,0 +1,31 @@
+
+
+Pseudocodigo -------------
+
+inicio 
+
+paso 1: Iniciar la aplicacion
+-- Aqui definimos la variables para almancenar datos (ej. entradas de usuarios)
+-- Configurar el entorno del navegador (event listener, elementos del DOM)
+
+paso 2: Funcion para manejar la interaccion del usuario
+-- Definir funcion "obtenerDatosUsuario"
+-- leer los datos de la entrada del formulario
+
+paso 3: Funcion para procesar los datos
+-- definir funcion: "procesarDatos"
+-- tomar los datos de entrada y realizar algun calculo o validacion
+
+paso 4: Funcion para mostrar resultados
+-- definimos funcion "mostrarDatos"
+-- Mostrar el resultado del proceso en la pagina
+
+paso 5: Configurar los eventos
+-- asociados a submit del formulario
+-- llamar a "obtenerDatosUsuario", "procesarDatos", "mostrarDatos"
+
+paso 6: Estilizacion y diseño
+-- Aplicar css para la interfaz del usuario
+
+paso 7: Ejecutar la aplicacion
+-- iniciar la aplicacion en el navegador, y esperar la interaccion del usuario
