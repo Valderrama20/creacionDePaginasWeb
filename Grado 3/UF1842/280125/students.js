@@ -18,11 +18,11 @@ const students = [
 const calcularPromedio = (notas) => notas.reduce((acc, nota) => acc + nota, 0) / notas.length;
 
 function estudiantesAprobados(students) {
-    return students.map(({ nombre, notas }) => {
-       let promedio = calcularPromedio(notas);
+    return students.map((student) => {
+       let promedio = calcularPromedio(student.notas).toFixed(2);
 
        return {
-        nombre,
+        ...student,
         promedio,
         aprobo: promedio >= 75
        };
