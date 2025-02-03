@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Estudiantes</title>
+</head>
+
+<body>
+    <!-- Crear una aplicación web que permita gestionar dinámicamente una lista de estudiantes utilizando un formulario en HTML y manipulando arrays en JavaScript. -->
+    <form id="newStudentForm">
+        <div>
+            <label for="studentName">Nombre de estudiante</label>
+            <input type="text" id="studentName" name="studentName" placeholder="Nombre de estudiante">
+        </div>
+        <button type="button" onclick="addStudent()">Crear Estudiante</button>
+    </form>
+    <section>
+        <ul id="studentList">
+        </ul>
+    </section>
+    <script>
+        // a) Inicialización de la lista de estudiantes
+        // Crear un array con una lista inicial de nombres de estudiantes.
+        // Convertir una cadena de nombres adicionales en un array y combinarlos con la lista original.const initialStudentList = ["pepe", "Juan", "Pedro"]
+       
+        const initialStudentList = ["pepe", "Juan", "Pedro"]
+        const initialStudentList2 = initialStudentList.concat("Ale,Jose,Mari".split(","))
+
+        // b) Función para actualizar la lista en la página
+        // Seleccionar el elemento <ul> donde se mostrará la lista.
+        // Limpiar su contenido antes de volver a llenarlo con los nombres de los estudiantes.
+        // Crear un elemento <li> para cada estudiante con su respectivo botón de "Eliminar".
+        // Agregar los elementos generados al <ul>.
+
+        function addStudentList(students) {
+            document.getElementById("studentList").innerHTML = ""
+            students.forEach(student => addStudent(student));
+        }
+
+        // c) Agregar un nuevo estudiante
+        // Capturar el evento submit del formulario.
+        // Obtener el valor del campo de entrada.
+        // Agregar el nuevo estudiante al array de estudiantes.
+        // Actualizar la lista en pantalla.
+        // Limpiar el campo de entrada después de cada adición.
+
+        function createNewStudent(name) {
+            const newLi = document.createElement("li")
+            newLi.innerHTML = `<span>${name}</span> <button onclick="deleteStudent(this)">Eliminar</button>`
+            return newLi
+        }
+
+        function addStudent(studentName = null) {
+            const studentList = document.getElementById("studentList");
+            const input = document.getElementById("studentName")
+            const studentValue = studentName ?? input.value;
+            studentList.appendChild(createNewStudent(studentValue))
+            input.value = ""
+        }
+
+        // d) Eliminar un estudiante
+        // Agregar un botón "Eliminar" junto a cada estudiante.
+        // Asociar un evento onclick al botón para eliminar el estudiante correspondiente del array.
+        // Actualizar la lista después de la eliminación
+
+        function deleteStudent(element) {
+            element.parentElement.remove()
+        }
+
+        window.onload = addStudentList(initialStudentList2)
+    </script>
+</body>
+
+</html>

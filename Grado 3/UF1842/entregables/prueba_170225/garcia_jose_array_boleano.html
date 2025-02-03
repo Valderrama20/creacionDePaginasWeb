@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Boleano</title>
+</head>
+
+<body>
+    <script>
+        // Crea un array booleano con dos valores 'verdadero' y 'falso'. 
+        // Este array te sirve para traducir los valores true y false. 
+        const verdaderoFalso = ["verdadero", "falso"];
+
+        // El script debe mostrar un alert con el nombre verdadero si un usuario teclea un valor entre 0 y 9 y falso en el caso contrario.
+        const number = parseInt(prompt("Ingra un numero entre 0 y 9"));
+        for (let i = 0; i <= 9; i++) {
+            if (number === i){
+                alert(verdaderoFalso[0]);
+            } 
+        }
+        // return alert(verdaderoFalso[1])
+
+        // Por ejemplo al teclear 10 deberá devolver falso
+    </script>
+</body>
+
+</html>

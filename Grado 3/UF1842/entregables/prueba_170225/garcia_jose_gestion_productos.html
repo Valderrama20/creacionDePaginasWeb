@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion Productos</title>
+</head>
+
+<body>
+
+    <script>
+        // Entrega IndividualCrea un programa en JavaScript que administre una lista de productos en una tienda. El programa debe:Contener un array con objetos de productos. Cada producto debe tener las propiedades:
+        // nombre (string)
+        // precio (número)
+        // stock (número)
+
+        const products = [
+            { name: "Laptop", price: 800, stock: 5 },
+            { name: "Mouse", price: 20, stock: 10 },
+            { name: "Teclado", price: 50, stock: 7 }
+        ];
+
+        // Implementar las siguientes funciones:
+        // agregarProducto(nombre, precio, stock): Agrega un nuevo producto al array.
+        function addProduct(name, price, stock) {
+            products.push({ name, price, stock })
+        }
+
+        // eliminarProducto(nombre): Elimina un producto por su nombre.
+        function deleteProductByName(productName) {
+            return products.filter(({ name }) => name !== productName);
+        }
+
+        // actualizarStock(nombre, cantidad): Modifica el stock de un producto.
+        function updateStockByName(name, stock) {
+            for (product of products) {
+                if (product.name === name) {
+                    product.stock = stock;
+                    return;
+                }
+            }
+        }
+
+        // obtenerProductosDisponibles(): Devuelve un array con los productos que tienen stock disponible (> 0).
+        function getProductsAvailable() {
+            return products.filter(({ stock }) => stock > 0)
+        }
+
+        // calcularValorInventario(): Devuelve el valor total del inventario (precio * stock de cada producto).
+         
+
+        // Datos
+        //     { nombre: "Laptop", precio: 800, stock: 5 },
+        //     { nombre: "Mouse", precio: 20, stock: 10 },
+        //     { nombre: "Teclado", precio: 50, stock: 7 },
+    </script>
+</body>
+
+</html>

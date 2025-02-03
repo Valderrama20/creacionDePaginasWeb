@@ -1,12 +1,4 @@
-// Función para calcular el valor total del stock de productos
-const calcularTotal = (productos) => {
-    return productos.reduce((acc, { precio, stock }) => acc + (precio * stock), 0);
-};
-
-// Función para filtrar productos en oferta
-const filtrarProductosEnOferta = (productos) => {
-    return productos.filter(({ oferta }) => oferta);
-};
+// Simularemos la gestión de un inventario, incluyendo calcular el valor total de los productos y filtrar productos en oferta.
 
 const productos = [
     { id: 1, nombre: "Camiseta", precio: 20, stock: 50, oferta: false },
@@ -15,8 +7,14 @@ const productos = [
     { id: 4, nombre: "Gorra", precio: 15, stock: 100, oferta: false }
 ];
 
-const totalProductos = calcularTotal(productos);
-console.log(`Valor total del stock: $${totalProductos.toFixed(2)}`);
+// utilizamos el metodo reduce para calcular el precio total del stock
+// destructuramos el objecto de producto para acceder a precio y stock
+// multiplicamos precio x stock y lo sumamos al acumulador
 
-const productosOferta = filtrarProductosEnOferta(productos);
-console.log("Productos en oferta:", productosOferta);
+const totalProductos = productos.reduce((acc, { precio, stock }) => acc + (precio * stock), 0)
+console.log(totalProductos)
+
+//filtramos y verificamos que productos estan en oferta
+
+const productosOferta = productos.filter(({oferta}) => oferta )
+console.log(productosOferta)
