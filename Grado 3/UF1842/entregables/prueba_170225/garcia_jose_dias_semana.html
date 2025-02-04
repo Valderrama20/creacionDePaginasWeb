@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jose Garcia - valderrama20">
     <title>Dias de las semana</title>
 </head>
 
 <body>
-
-
     <script>
         // Crear un array para guardar los nombres de los días de la semana, empezando por 0 para el domingo. 
         const daysOfWeek = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
@@ -17,8 +16,7 @@
         // Para comprobar el funcionamiento pide al usuario un número entre 0 y 6 y devuelve el nombre del día.
         // Se supone que el dato tecleado estará entre 0 y 6
         // Si tecleo el número 4 me deberá decir que el día de la semana es jueves
-
-        const daySelect = promptparseInt(prompt("Elegir un numero de la semana entre 0 (Domingo) y 6 (Sabado)"));
+        const daySelect = parseInt(prompt("Elegir un numero de la semana entre 0 (Domingo) y 6 (Sabado)"));
 
         if (daySelect >= 0 && daySelect <= 7) {
             alert(`El día de la semana es: ${daysOfWeek[daySelect]}`);

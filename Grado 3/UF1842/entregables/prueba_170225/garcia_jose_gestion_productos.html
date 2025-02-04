@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jose Garcia - valderrama20">
     <title>Gestion Productos</title>
 </head>
 
 <body>
-
     <script>
         // Entrega IndividualCrea un programa en JavaScript que administre una lista de productos en una tienda. El programa debe:Contener un array con objetos de productos. Cada producto debe tener las propiedades:
         // nombre (string)
         // precio (número)
         // stock (número)
 
-        const products = [
+        let products = [
             { name: "Laptop", price: 800, stock: 5 },
             { name: "Mouse", price: 20, stock: 10 },
-            { name: "Teclado", price: 50, stock: 7 }
+            { name: "Teclado", price: 50, stock: 7 },
+            { name: "Compu", price: 50, stock: 0 }
         ];
 
         // Implementar las siguientes funciones:
@@ -34,6 +35,7 @@
 
         // actualizarStock(nombre, cantidad): Modifica el stock de un producto.
         function updateStockByName(name, stock) {
+            console.log("Se invoco a la funcion updateStockByName")
             for (product of products) {
                 if (product.name === name) {
                     product.stock = stock;
@@ -48,12 +50,22 @@
         }
 
         // calcularValorInventario(): Devuelve el valor total del inventario (precio * stock de cada producto).
-         
+        function calculateInventoryValue() {
+            return products.reduce((acc, { price, stock }) => acc + (price * stock) , 0)
+        }
 
-        // Datos
-        //     { nombre: "Laptop", precio: 800, stock: 5 },
-        //     { nombre: "Mouse", precio: 20, stock: 10 },
-        //     { nombre: "Teclado", precio: 50, stock: 7 },
+        addProduct("cocolate", 20, 10)
+        console.log(products)
+
+        products = deleteProductByName("Mouse")
+        console.log(products)
+
+        updateStockByName("Teclado", 222)
+        console.log(products)
+
+        console.log(getProductsAvailable())
+
+        console.log(calculateInventoryValue())
     </script>
 </body>
 
