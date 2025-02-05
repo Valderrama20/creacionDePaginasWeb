@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jose Garcia - valderrama20">
+    <title>Manipulacion del DOM - LISTA DE TAREAS</title>
+</head>
+
+<body>
+    <h1>Lista de tareas</h1>
+    <input type="text" id="inputTask" placeholder="Escribe una tarea">
+    <p id="errorMessage" style="color: red; text-decoration: dashed;"></p>
+    <button id="addTask">Agregar Tarea</button>
+    <section>
+        <div>
+            <button value="all" onclick="filterTask(this)">Todas las tareas</button>
+            <button value="pending" onclick="filterTask(this)">Tareas Pendientes</button>
+            <button value="complete" onclick="filterTask(this)">Tareas Listas</button>
+        </div>
+        <div>
+            <h2>Tareas</h2>
+            <ul id="taskList"></ul>
+        </div>
+        <div>
+            <h2>Tareas pendientes</h2>
+            <ul id="taskPendingList"></ul>
+        </div>
+        <div>
+            <h2>Tareas listas</h2>
+            <ul id="taskCompleteList"></ul>
+        </div>
+    </section>
+    <script>
+        const taskArr = [{ name: "Coco", status: "initial" }, { name: "Comprar", status: "pending" }]
+        // Agrega botones de completar y filtrar tareas (pendiente o completada)
+        // Modifica el alert por un texto bajo el input (Por favor agregar tarea)
+
+        // Seleccionamos los elementos del dom
+        const inputTask = document.getElementById("inputTask"); // Input de texto
+        const addTaskButton = document.getElementById("addTask");// Boton
+        const errorMessageContainer = document.getElementById("errorMessage")
+        const taskList = document.getElementById("taskList");// Lista de tareas
+        const taskPendingList = document.getElementById("taskPendingList");// Lista de tareas
+        const taskCompleteList = document.getElementById("taskCompleteList");// Lista de tareas
+
+        function filterTask(elemento) {
+            if (elemento.value === "pending") {
+                taskList.parentElement.hidden = true
+                taskPendingList.parentElement.hidden = false
+                taskCompleteList.parentElement.hidden = true
+            } else if (elemento.value === "complete") {
+                taskList.parentElement.hidden = true
+                taskPendingList.parentElement.hidden = true
+                taskCompleteList.parentElement.hidden = false
+            }
+            else {
+                taskList.parentElement.hidden = false
+                taskPendingList.parentElement.hidden = false
+                taskCompleteList.parentElement.hidden = false
+            }
+        }
+
+        function createLi({ name, status }) {
+            taskArr.push({ name, status })
+            const newLi = document.createElement("li")
+            newLi.setAttribute("status", status)
+            newLi.textContent = name
+            newLi.style.color = status === "pending" ? "red" : status === "complete" ? "green" : ""
+            return newLi
+        }
+
+        function createPendingButton() {
+            const button = document.createElement("button")
+            button.textContent = "Pending"
+            button.addEventListener("click", (event) => {
+                //Obtenemos el padre del boton clickeado   
+                let li = event.target.parentElement;
+                //Eliminar el li de la lista actual
+                li.remove()
+                // eliminamos el boton de pending 
+                event.target.remove()
+                //Agregamos el boton de completado
+                li.appendChild(createCompleteButton())
+                //Cambiamos el color a la tarea
+                li.style = "color: red;"
+                //Añadimos el li a la nueva lista
+                taskPendingList.appendChild(li)
+            })
+            return button
+        }
+
+        function createCompleteButton() {
+            const button = document.createElement("button")
+            button.textContent = "Completada"
+            // Creamos el evento para el boton de Completada
+            button.addEventListener("click", (event) => {
+                //Obtenemos el padre del boton clickeado   
+                let li = event.target.parentElement;
+                //Eliminar el li de la lista actual
+                li.remove()
+                // eliminamos el boton de Completado 
+                event.target.remove()
+                //Cambiamos el color a la tarea
+                li.style = "color: green; text-decoration: dashed;"
+                //Añadimos el li a la nueva lista
+                taskCompleteList.appendChild(li)
+            })
+            return button
+        }
+
+        // Agregar un evento al boton para agregar tareas
+        addTaskButton.addEventListener("click", () => {
+            // verificamos si el input esta vacio
+            if (inputTask.value.trim() === "") {
+                errorMessageContainer.textContent = "Ingresa una tarea"
+                return;
+            }
+            errorMessageContainer.textContent = ""
+
+            // Creamos el li a utilizar
+            const newLi = createLi({ name: inputTask.value, status: "initial" })
+
+            //añadimos el boton de pending al li
+            newLi.append(createPendingButton())
+
+            // Añadimos el nuevo li al ul
+            taskList.appendChild(newLi)
+
+            // Limpiamos el input luego de agregar la tarea
+            inputTask.value = ""
+        })
+
+    </script>
+</body>
+
+</html>

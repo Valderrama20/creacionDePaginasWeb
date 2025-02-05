@@ -1,0 +1,33 @@
+TEORIA:
+
+El DOM (Document Object Model) es una representación en forma de árbol de los elementos que componen un documento HTML.
+
+Este modelo permite a los programas y scripts (como JavaScript) acceder, modificar, agregar o eliminar elementos y contenido de una página web de manera dinámica.
+
+En términos simples, el DOM es una interfaz que conecta el documento HTML con JavaScript, permitiendo manipular la estructura, el estilo y el contenido de una página web.
+
+El DOM está compuesto por diferentes tipos de nodos:
+
+Document: Es el nodo raíz que representa todo el documento HTML.
+
+Element: Representa una etiqueta HTML (por ejemplo, <div>, <p>, <h1>).
+
+Text: Representa el texto dentro de un elemento.
+
+Attribute: Representa un atributo de un elemento (por ejemplo, class, id, src).
+
+Comment: Representa un comentario en el HTML.
+
+
+
+METODOS MAS UTILIZADOS:
+
+1. getElementById: Este método permite seleccionar un elemento del DOM (Document Object Model) por su atributo `id`. Retorna el elemento que tiene el `id` especificado.
+
+2. querySelector: Este método permite seleccionar el primer elemento que coincida con un selector CSS. Puedes seleccionar elementos por su clase, id, tipo, etc.
+
+3. addEventListener: Este método permite agregar un evento a un elemento del DOM. Los eventos pueden ser clics, cambios, teclas presionadas, etc.
+
+4. createElement: Este método permite crear un nuevo elemento HTML. Una vez creado, puedes agregarlo al DOM usando métodos como `appendChild`.
+
+5. appendChild: Este método permite agregar un nodo (elemento) como hijo de otro elemento en el DOM.
