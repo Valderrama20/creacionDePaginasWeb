@@ -33,7 +33,6 @@
         </div>
     </section>
     <script>
-        const taskArr = [{ name: "Coco", status: "initial" }, { name: "Comprar", status: "pending" }]
         // Agrega botones de completar y filtrar tareas (pendiente o completada)
         // Modifica el alert por un texto bajo el input (Por favor agregar tarea)
 
@@ -44,30 +43,27 @@
         const taskList = document.getElementById("taskList");// Lista de tareas
         const taskPendingList = document.getElementById("taskPendingList");// Lista de tareas
         const taskCompleteList = document.getElementById("taskCompleteList");// Lista de tareas
-
+        
+        // Filtros para las tareas
+        let lists = {
+            "all": taskList.parentElement,
+            "pending": taskPendingList.parentElement,
+            "complete": taskCompleteList.parentElement
+        }
         function filterTask(elemento) {
-            if (elemento.value === "pending") {
-                taskList.parentElement.hidden = true
-                taskPendingList.parentElement.hidden = false
-                taskCompleteList.parentElement.hidden = true
-            } else if (elemento.value === "complete") {
-                taskList.parentElement.hidden = true
-                taskPendingList.parentElement.hidden = true
-                taskCompleteList.parentElement.hidden = false
-            }
-            else {
-                taskList.parentElement.hidden = false
-                taskPendingList.parentElement.hidden = false
-                taskCompleteList.parentElement.hidden = false
+            let status = elemento.value
+            for (const key in lists) {
+                lists[key].hidden = status !== "all" && key !== status
             }
         }
 
-        function createLi({ name, status }) {
-            taskArr.push({ name, status })
+        function createLi(text) {
+            // Creamos el li
             const newLi = document.createElement("li")
-            newLi.setAttribute("status", status)
-            newLi.textContent = name
-            newLi.style.color = status === "pending" ? "red" : status === "complete" ? "green" : ""
+            // Le ingresamos el texto 
+            newLi.textContent = text
+            //añadimos el boton de pending al li
+            newLi.append(createPendingButton())
             return newLi
         }
 
@@ -117,13 +113,11 @@
                 errorMessageContainer.textContent = "Ingresa una tarea"
                 return;
             }
+            // Si no hay error se limpia1
             errorMessageContainer.textContent = ""
 
             // Creamos el li a utilizar
-            const newLi = createLi({ name: inputTask.value, status: "initial" })
-
-            //añadimos el boton de pending al li
-            newLi.append(createPendingButton())
+            const newLi = createLi(inputTask.value)
 
             // Añadimos el nuevo li al ul
             taskList.appendChild(newLi)
