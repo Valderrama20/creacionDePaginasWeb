@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Jose Garcia - valderrama20" />
+    <title>Lista de Tareas Mejorada</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Lista de Tareas Mejorada</h1>
+    <input type="text" id="entradaTarea" placeholder="Nueva tarea" required />
+    <input type="date" id="entradaFecha" required />
+    <input
+      type="text"
+      id="entradaTiempo"
+      placeholder="Tiempo estimado (ej: 2 horas)"
+      required
+    />
+    <button id="botonAgregar">Agregar Tarea</button>
+
+    <div id="botonesFiltro">
+      <button onclick="filtrarTareas('all')">Mostrar Todas</button>
+      <button onclick="filtrarTareas('completed')">Mostrar Completadas</button>
+      <button onclick="filtrarTareas('pending')">Mostrar Pendientes</button>
+    </div>
+
+    <ul id="listaTareas"></ul>
+
+    <script src="script/script.js"></script>
+  </body>
+</html>

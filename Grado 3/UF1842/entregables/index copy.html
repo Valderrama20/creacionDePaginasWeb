@@ -10,9 +10,12 @@
 
 <body>
     <h1>Lista de tareas</h1>
-    <input type="text" id="inputTask" placeholder="Escribe una tarea">
-    <p id="errorMessage" style="color: red; text-decoration: dashed;"></p>
-    <button id="addTask">Agregar Tarea</button>
+    <form id="taskForm">
+        <input type="text" id="inputTask" placeholder="Escribe una tarea">
+        <p id="errorMessage" style="color: red; text-decoration: dashed;"></p>
+        <button type="submit">Agregar Tarea</button>
+    </form>
+
     <section>
         <div>
             <button value="all" onclick="filterTask(this)">Todas las tareas</button>
@@ -38,7 +41,7 @@
 
         // Seleccionamos los elementos del dom
         const inputTask = document.getElementById("inputTask"); // Input de texto
-        const addTaskButton = document.getElementById("addTask");// Boton
+        const taskForm = document.getElementById("taskForm");// Boton
         const errorMessageContainer = document.getElementById("errorMessage")
         const taskList = document.getElementById("taskList");// Lista de tareas
         const taskPendingList = document.getElementById("taskPendingList");// Lista de tareas
@@ -49,65 +52,67 @@
             "all": taskList.parentElement,
             "pending": taskPendingList.parentElement,
             "complete": taskCompleteList.parentElement
-        }
+        };
         function filterTask(elemento) {
-            let status = elemento.value
+            let status = elemento.value;
             for (const key in lists) {
-                lists[key].hidden = status !== "all" && key !== status
+                lists[key].hidden = status !== "all" && key !== status;
             }
         }
 
         function createLi(text) {
             // Creamos el li
-            const newLi = document.createElement("li")
+            const newLi = document.createElement("li");
+
             // Le ingresamos el texto 
-            newLi.textContent = text
-            const completeButton = createButton({ text: "Listo", newList: taskCompleteList, color: "red" })
-            const pendingButton = createButton({ text: "Pendiente", newList: taskPendingList, color: "green", appen: completeButton })
+            newLi.textContent = text;
+            const completeButton = createButton({ text: "Listo", newList: taskCompleteList, color: "red" });
+            const pendingButton = createButton({ text: "Pendiente", newList: taskPendingList, color: "green", appen: completeButton });
             
             //añadimos el boton de pending al li
-            newLi.append(pendingButton)
-            return newLi
+            newLi.append(pendingButton);
+            return newLi;
         }
 
         function createButton({ text, newList, color, appen }) {
-            const button = document.createElement("button")
-            button.textContent = text
+            const button = document.createElement("button");
+            button.textContent = text;
             button.addEventListener("click", (event) => {
                 //Obtenemos el padre del boton clickeado   
                 let li = event.target.parentElement;
                 //Eliminar el li de la lista actual
-                li.remove()
+                li.remove();
                 // eliminamos el boton
-                event.target.remove()
+                event.target.remove();
                 //Agregamos el nuevo boton al li boton si es necesario
-                if(appen) li.appendChild(appen)
+                if(appen) li.appendChild(appen);
                 //Cambiamos el color a la tarea
-                li.style = `color: ${color};`
+                li.style = `color: ${color};`;
                 //Añadimos el li a la nueva lista
-                newList.appendChild(li)
+                newList.appendChild(li);
             })
-            return button
+            return button;
         }
 
         // Agregar un evento al boton para agregar tareas
-        addTaskButton.addEventListener("click", () => {
+        taskForm.addEventListener("submit", (e) => {
+            e.preventDefault();
             // verificamos si el input esta vacio
             if (inputTask.value.trim() === "") {
-                errorMessageContainer.textContent = "Ingresa una tarea"
+                errorMessageContainer.textContent = "Ingresa una tarea";
                 return;
             }
-            // Si no hay error se limpia1
-            errorMessageContainer.textContent = ""
+            // Si no hay error se limpia
+            errorMessageContainer.textContent = "";
 
             // Creamos el li a utilizar
-            const newLi = createLi(inputTask.value)
+            const newLi = createLi(inputTask.value);
 
             // Añadimos el nuevo li al ul inicial
-            taskList.appendChild(newLi)
+            taskList.appendChild(newLi);
 
             // Limpiamos el input luego de agregar la tarea
-            inputTask.value = ""
+            inputTask.value = "";
         })
 
     </script>

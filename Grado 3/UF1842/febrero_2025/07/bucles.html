@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de numeros</title>
+  </head>
+  <body>
+    <!-- Crear una lista dinamica con numeros pares
+     crear una lista en el dom que muestre los numeros pares del 1 al 20  -->
+
+    <h1>Numeros pares del 1 al 20</h1>
+    <!-- Cnntenedor de la lista -->
+    <ul id="numberList"></ul>
+
+    <div class="start" data-value="1">★</div>
+    <div class="start" data-value="2">★</div>
+    <div class="start" data-value="3">★</div>
+    <div class="start" data-value="4">★</div>
+    <div class="start" data-value="5">★</div>
+    
+    
+    <script>
+      // paso 1: accede al elemento dom
+      const numberList = document.getElementById("numberList");
+      // paso 2: Usar bucle para iterar
+      for (let i = 1; i <= 20; i++) {
+        console.log(i);
+        // paso 3: verficiamos si el numero es par
+        if (i % 2 === 0) {
+          //paso 4: Creamos el elemento nuevo li
+          const item = document.createElement("li");
+          // paso 5: Asignar el numero par como contenido del li
+          item.textContent = i;
+          //   Añader el numero al ul
+          numberList.appendChild(item);
+        }
+      }
+
+      const start = document.querySelectorAll(".start");
+      start.forEach((element) => {
+        const value = element.getAttribute("data-value");
+        console.log("valoracion: ", value);
+      });
+    </script>
+  </body>
+</html>

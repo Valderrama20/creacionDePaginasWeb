@@ -1,0 +1,89 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Estilos para la entrada de tarea, fecha y tiempo */
+#entradaTarea, #entradaFecha, #entradaTiempo {
+    padding: 10px;
+    width: 200px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el botón de agregar tarea */
+#botonAgregar {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos para los botones de filtrado */
+#botonesFiltro {
+    margin: 20px 0;
+}
+
+/* Estilos para la lista de tareas */
+#listaTareas {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Estilos para cada elemento de la lista de tareas */
+.elementoTarea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Estilos para tareas completadas */
+.completada {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.tareaPendiente {
+    background-color: #eaff30;
+}
+.tareaConpletada{
+    background-color: #78ff30;
+}
+
+/* Estilos para los botones de eliminar y editar */
+.botonEliminar, .botonEditar, .botonTareaLista {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.botonTareaLista {
+    background-color: green;
+}
+
+.botonEditar {
+    background-color: #ffc107;
+}
+
+/* Estilos para la fecha límite y el tiempo estimado */
+.fechaLimite, .tiempoEstimado {
+    font-size: 0.9em;
+    color: #555;
+    margin-left: 10px;
+}
+
+/* Estilos para mensajes de error */
+.mensajeError {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
