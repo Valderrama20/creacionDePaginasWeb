@@ -1,465 +1,486 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Jose Garcia - valderrama20">
-    <meta name="keywords" content="Viajes, Turismo, Vacaciones, Vuelos Economicos">
-    <title>Vuela al siguiente nivel y descubre un mundo de posibilidades.</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Jose Garcia - valderrama20" />
+    <meta
+      name="keywords"
+      content="Viajes, Turismo, Vacaciones, Vuelos Economicos"
+    />
+    <title>
+      Vuela al siguiente nivel y descubre un mundo de posibilidades.
+    </title>
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Variables */
+      :root {
+        --primary-color: #042c3c;
+        --crema: #d7dfe2;
+        --green: #046d91;
+        --light-green: #048bba;
+        --gray: #5f7b85;
+        --light-gray: #7c9ca4;
+      }
 
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Variables */
-        :root {
-            --primary-color: #042c3c;
-            --crema: #d7dfe2;
-            --green: #046d91;
-            --light-green: #048bba;
-            --gray: #5f7b85;
-            --light-gray: #7c9ca4;
-        }
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
 
-        /* Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+      body {
+        background-color: var(--crema);
+      }
 
-        body {
-            background-color: var(--crema);
-        }
+      /* Cabecera */
 
-        /* Cabecera */
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: var(--primary-color);
+        color: var(--crema);
+        font-weight: bold;
+      }
 
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            background-color: var(--primary-color);
-            color: var(--crema);
-            font-weight: bold;
-        }
+      /* Barra de navegacion */
 
-        /* Barra de navegacion */
+      nav {
+        width: 100%;
+        background-color: var(--green);
+        color: var(--crema);
+      }
 
-        nav {
-            width: 100%;
-            background-color: var(--green);
-            color: var(--crema);
-        }
+      nav ul {
+        padding: 20px 0;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
 
-        nav ul {
-            padding: 20px 0;
-            display: flex;
-            width: 100%;
-            justify-content: center;
-        }
+      nav ul li {
+        list-style: none;
+        padding: 0 10px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+      }
 
-        nav ul li {
-            list-style: none;
-            padding: 0 10px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.1s ease-in-out;
-        }
+      nav ul li a {
+        color: var(--crema);
+        text-decoration: none;
+        font-weight: 600;
+      }
 
-        nav ul li a {
-            color: var(--crema);
-            text-decoration: none;
-            font-weight: 600;
-        }
+      nav ul li:hover {
+        transform: scale(1.1);
+        text-decoration: underline;
+      }
 
-        nav ul li:hover {
-            transform: scale(1.1);
-            text-decoration: underline;
-        }
+      /* Contenido de la pagina  */
 
-        /* Contenido de la pagina  */
+      .container {
+        display: flex;
+        width: 100%;
+      }
 
-        .container {
-            display: flex;
-            width: 100%;
-        }
+      /* Contenido principal de la pagina */
 
-        /* Contenido principal de la pagina */
+      .container > div {
+        display: flex;
+        align-items: center;
+        width: 75%;
+        padding: 75px 15px;
+        background-color: var(--crema);
+        color: var(--light-green);
+      }
 
-        .container>div {
-            display: flex;
-            align-items: center;
-            width: 75%;
-            padding: 75px 15px;
-            background-color: var(--crema);
-            color: var(--light-green);
-        }
+      .mainDescription {
+        margin: 0 auto;
+        width: 70%;
+        padding: 0 5px;
+      }
 
-        .mainDescription {
-            margin: 0 auto;
-            width: 70%;
-            padding: 0 5px;
-        }
+      .mainDescription h2 {
+        font-size: 2rem;
+        margin: 10px 0;
+      }
 
-        .mainDescription h2 {
-            font-size: 2rem;
-            margin: 10px 0;
-        }
+      .mainDescription p {
+        color: var(--gray);
+      }
 
-        .mainDescription p {
-            color: var(--gray);
-        }
+      .mainImage {
+        width: 50%;
+      }
 
-        .mainImage {
-            width: 50%;
-        }
+      .mainImage img {
+        width: 100%;
+        border-radius: 15px;
+      }
 
-        .mainImage img {
-            width: 100%;
-            border-radius: 15px;
-        }
+      .mainDescription table {
+        margin: 15px 0;
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+      }
 
-        .mainDescription table {
-            margin: 15px 0;
-            width: 100%;
-            border-collapse: collapse;
-            text-align: center;
-        }
+      .mainDescription table th,
+      td {
+        border: 2px solid var(--light-gray);
+        padding: 10px;
+      }
 
-        .mainDescription table th,
-        td {
-            border: 2px solid var(--light-gray);
-            padding: 10px;
-        }
+      /* Contenido lateral */
 
-        /* Contenido lateral */
+      .container aside {
+        height: 100%;
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--crema);
+        color: var(--light-green);
+        border-left: 2px solid var(--light-green);
+      }
 
-        .container aside {
-            height: 100%;
-            width: 25%;
-            display: flex;
-            flex-direction: column;
-            background-color: var(--crema);
-            color: var(--light-green);
-            border-left: 2px solid var(--light-green);
-        }
+      .infoCard {
+        width: 90%;
+        margin: 10px auto;
+      }
 
-        .infoCard {
-            width: 90%;
-            margin: 10px auto;
-        }
+      .infoCard h4 {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+      }
 
-        .infoCard h4 {
-            font-size: 1.2rem;
-            line-height: 1.5rem;
-        }
+      .infoCard p {
+        color: var(--gray);
+      }
 
-        .infoCard p {
-            color: var(--gray);
-        }
+      .containerImg {
+        width: 100%;
+        overflow: hidden;
+        height: 150px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+      }
 
-        .containerImg {
-            width: 100%;
-            overflow: hidden;
-            height: 150px;
-            border-radius: 20px;
-            margin-bottom: 10px;
-        }
+      .containerImg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
 
-        .containerImg img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+      /* Contenido del formulario */
 
-        /* Contenido del formulario */
+      .formContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 100vh;
+        background-color: var(--crema);
+      }
 
-        .formContainer {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            min-height: 100vh;
-            background-color: var(--crema);
-        }
+      .formContainer h4 {
+        font-size: 2rem;
+        color: var(--crema);
+      }
 
-        .formContainer h4 {
-            font-size: 2rem;
-            color: var(--crema);
-        }
+      .formContainer form {
+        border-radius: 5px;
+        padding: 10px 20px;
+        width: 100%;
+        max-width: 50%;
+      }
 
-        .formContainer form {
-            border-radius: 5px;
-            padding: 10px 20px;
-            width: 100%;
-            max-width: 50%;
-        }
+      /* .formContainer form */
 
-        /* .formContainer form */
+      ::placeholder {
+        color: var(--light-gray);
+      }
 
-        ::placeholder {
-            color: var(--light-gray);
-        }
+      .formContainer {
+        background-color: var(--primary-color);
+      }
 
-        .formContainer {
-            background-color: var(--primary-color);
-        }
+      .formContainer form div {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+      }
 
-        .formContainer form div {
-            display: flex;
-            flex-direction: column;
-            margin: 10px 0;
-        }
+      .formContainer form div label {
+        margin: 5px 0;
+        font-weight: 700;
+        color: var(--crema);
+      }
 
-        .formContainer form div label {
-            margin: 5px 0;
-            font-weight: 700;
-            color: var(--crema);
-        }
+      .formContainer form div input,
+      select {
+        background-color: transparent;
+        border: 1px solid var(--light-gray);
+        border-radius: 50px;
+        padding: 15px 20px;
+        color: var(--light-gray);
+      }
 
-        .formContainer form div input,
-        select {
-            background-color: transparent;
-            border: 1px solid var(--light-gray);
-            border-radius: 50px;
-            padding: 15px 20px;
-            color: var(--light-gray);
-        }
+      .formContainer button {
+        width: 100%;
+        font-size: 1.1rem;
+        color: var(--crema);
+        background-color: var(--green);
+        border: 1px solid var(--green);
+        padding: 15px 0;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+        margin: 10px 0;
+      }
 
-        .formContainer button {
-            width: 100%;
-            font-size: 1.1rem;
-            color: var(--crema);
-            background-color: var(--green);
-            border: 1px solid var(--green);
-            padding: 15px 0;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.1s ease-in-out;
-            margin: 10px 0;
-        }
+      .formContainer button:hover {
+        transform: scale(1.05);
+      }
 
-        .formContainer button:hover {
-            transform: scale(1.05);
-        }
+      /* Footer */
 
-        /* Footer */
+      footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--primary-color);
+        border-top: 2px solid var(--green);
+        color: var(--crema);
+      }
 
-        footer {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: var(--primary-color);
-            border-top: 2px solid var(--green);
-            color: var(--crema);
-        }
+      footer > div {
+        padding: 10px 40px;
+      }
 
-        footer>div {
-            padding: 10px 40px;
-        }
+      .redes {
+        display: flex;
+      }
 
-        .redes {
-            display: flex;
-        }
+      .redes h6 {
+        font-size: 1.2rem;
+        line-height: 2rem;
+      }
 
-        .redes h6 {
-            font-size: 1.2rem;
-            line-height: 2rem;
-        }
+      .redes div:first-child {
+        max-width: 300px;
+      }
 
-        .redes div:first-child {
-            max-width: 300px;
-        }
+      .redes li,
+      .redes a {
+        list-style: none;
+        color: var(--light-gray);
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+        text-decoration: none;
+      }
 
-        .redes li,
-        .redes a {
-            list-style: none;
-            color: var(--light-gray);
-            cursor: pointer;
-            transition: all 0.1s ease-in-out;
-            text-decoration: none;
-        }
+      .redes li:hover,
+      .redes a:hover {
+        color: var(--crema);
+      }
 
-        .redes li:hover,
-        .redes a:hover {
-            color: var(--crema);
-        }
+      /* Estilos del divisor */
+      .divisor {
+        width: 100%;
+        overflow: hidden;
+        transform: rotate(180deg);
+        margin-bottom: -1px;
+      }
 
-        /* Estilos del divisor */
-        .divisor {
-            width: 100%;
-            overflow: hidden;
-            transform: rotate(180deg);
-            margin-bottom: -1px;
-        }
-
-        .divisor img {
-            position: relative;
-            display: block;
-            width: calc(194% + 1.3px);
-            height: 121px;
-            transform: rotateY(180deg);
-        }
+      .divisor img {
+        position: relative;
+        display: block;
+        width: calc(194% + 1.3px);
+        height: 121px;
+        transform: rotateY(180deg);
+        z-index: ;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Cabecera  -->
     <header>
-        <!-- contenedor del logo -->
-        <div>
-            <img src="assets/img/logo-sin-fondo-small.png" alt="Logo de Business Airlines">
-        </div>
-        <!-- Contenedor del slogan -->
-        <div>
-            <h1>Business Airlines</h1>
-            <p> Vuela al siguiente nivel y descubre un mundo de posibilidades.</p>
-        </div>
+      <!-- contenedor del logo -->
+      <div>
+        <img
+          src="assets/img/logo-sin-fondo-small.png"
+          alt="Logo de Business Airlines"
+        />
+      </div>
+      <!-- Contenedor del slogan -->
+      <div>
+        <h1>Business Airlines</h1>
+        <p>Vuela al siguiente nivel y descubre un mundo de posibilidades.</p>
+      </div>
     </header>
     <!-- Menu de navegacion -->
     <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#">Destinos</a></li>
-            <li><a href="#reserva">Reservas</a></li>
-            <li><a href="#contac">Contacto</a></li>
-        </ul>
+      <ul>
+        <li><a href="#inicio" title="Inicio">Inicio</a></li>
+        <li><a href="#" title="Detinos">Destinos</a></li>
+        <li><a href="#reserva" title="Reservas">Reservas</a></li>
+        <li><a href="#contac" title="Contacto">Contacto</a></li>
+      </ul>
     </nav>
     <!-- Contenido principal de la pagina-->
     <main>
-        <div class="container">
-            <div id="inicio">
-                <div class="mainDescription">
+      <div class="container">
+        <div id="inicio">
+          <div class="mainDescription">
+            <!-- Descripcion de la pagina-->
+            <h2>Explora el mundo con Business Airlines</h2>
+            <p>
+              En Business Airlines, nos especializamos en ofrecer experiencias
+              de vuelo incomparables para viajeros de negocios y clientes
+              exigentes. Nuestra misión es proporcionar un servicio de primera
+              clase que combine lujo, comodidad y puntualidad en cada trayecto.
+            </p>
 
-                    <!-- Descripcion de la pagina-->
-                    <h2>Explora el mundo con Business Airlines</h2>
-                    <p>
-                        En Business Airlines, nos especializamos en ofrecer experiencias de vuelo incomparables para
-                        viajeros
-                        de negocios y clientes exigentes. Nuestra misión es proporcionar un servicio de primera clase
-                        que
-                        combine lujo, comodidad y puntualidad en cada trayecto.
-                    </p>
-
-                    <!-- Tabla con precios de los vuelos -->
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Ciudad</th>
-                                <th>Precio</th>
-                                <th>Duracion De Vuelo</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Mexico</td>
-                                <td>400 €</td>
-                                <td>2:00 Hs</td>
-                            </tr>
-                            <tr>
-                                <td>Italia</td>
-                                <td>200 €</td>
-                                <td>4:00 Hs</td>
-                            </tr>
-                            <tr>
-                                <td>Francia</td>
-                                <td>800 €</td>
-                                <td>6:00 Hs</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <!-- Tabla con precios de los vuelos -->
+            <table>
+              <thead>
+                <tr>
+                  <th>Ciudad</th>
+                  <th>Precio</th>
+                  <th>Duracion De Vuelo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mexico</td>
+                  <td>400 €</td>
+                  <td>2:00 Hs</td>
+                </tr>
+                <tr>
+                  <td>Italia</td>
+                  <td>200 €</td>
+                  <td>4:00 Hs</td>
+                </tr>
+                <tr>
+                  <td>Francia</td>
+                  <td>800 €</td>
+                  <td>6:00 Hs</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Contenido relacionado con la pagina -->
+        <aside>
+          <div class="infoCard">
+            <div class="containerImg">
+              <img src="assets/img/flota.jpg" alt="Imagen de Aeropuerto" />
             </div>
-            <!-- Contenido relacionado con la pagina -->
-            <aside>
-                <div class="infoCard">
-                    <div class="containerImg">
-                        <img src="assets/img/flota.jpg" alt="Aeropuerto">
-                    </div>
-                    <div>
-                        <h4>Flota Moderna</h4>
-                        <p>Contamos con una flota de aviones de última generación equipados con la más avanzada
-                            tecnología
-                            en seguridad y confort. </p>
-                    </div>
-                </div>
-                <div class="infoCard">
-                    <div class="containerImg">
-                        <img src="assets/img/aeropuerto.jpg" alt="Aeropuerto">
-                    </div>
-                    <div>
-                        <h4>Servicios Premium</h4>
-                        <p>Accede a una amplia gama de servicios premium que hacen de tu viaje una experiencia
-                            placentera y
-                            sin estrés </p>
-                    </div>
-                </div>
-            </aside>
-        </div>
+            <div>
+              <h4>Flota Moderna</h4>
+              <p>
+                Contamos con una flota de aviones de última generación equipados
+                con la más avanzada tecnología en seguridad y confort.
+              </p>
+            </div>
+          </div>
+          <div class="infoCard">
+            <div class="containerImg">
+              <img src="assets/img/aeropuerto.jpg" alt="Aeropuerto" />
+            </div>
+            <div>
+              <h4>Servicios Premium</h4>
+              <p>
+                Accede a una amplia gama de servicios premium que hacen de tu
+                viaje una experiencia placentera y sin estrés
+              </p>
+            </div>
+          </div>
+        </aside>
+      </div>
 
-        <!-- Divisor -->
-        <div class="divisor">
-            <img src="assets/svg/divisor.svg" alt="divisor">
-        </div>
+      <!-- Divisor -->
+      <div class="divisor">
+        <img src="assets/svg/divisor.svg" alt="divisor de contenido" />
+      </div>
 
-        <!-- Formulario de contacto -->
-        <section class="formContainer" id="reserva">
-            <h4>Formulario de reservas</h4>
-            <form action="#">
-                <div>
-                    <label for="fullName">Nombre Completo:</label>
-                    <input type="text" id="fullName" name="fullName" placeholder="Nombre Completo" required>
-                </div>
-                <div>
-                    <label for="email">Correo Electronico:</label>
-                    <input type="email" id="email" name="email" placeholder="Correo Electronico" required>
-                </div>
-                <div>
-                    <label for="destination">Selecionar destino:</label>
-                    <select id="destination" name="destination">
-                        <option value="">Destinos...</option>
-                        <option value="mexico">Mexico</option>
-                        <option value="italida">Italia</option>
-                        <option value="francia">Francia</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="date">Fecha de vuelo:</label>
-                    <input type="date" id="date" name="date" required>
-                </div>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
+      <!-- Formulario de contacto -->
+      <section class="formContainer" id="reserva">
+        <h4>Formulario de reservas</h4>
+        <form action="#">
+          <div>
+            <label for="fullName">Nombre Completo:</label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              placeholder="Nombre Completo"
+              required
+            />
+          </div>
+          <div>
+            <label for="email">Correo Electronico:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Correo Electronico"
+              required
+            />
+          </div>
+          <div>
+            <label for="destination">Selecionar destino:</label>
+            <select id="destination" name="destination">
+              <option value="">Destinos...</option>
+              <option value="mexico">Mexico</option>
+              <option value="italida">Italia</option>
+              <option value="francia">Francia</option>
+            </select>
+          </div>
+          <div>
+            <label for="date">Fecha de vuelo:</label>
+            <input type="date" id="date" name="date" required />
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
     </main>
 
     <!-- Pie de la pagina web, incluye logo, datos de contacto y redes sociales  -->
     <footer id="contac">
-        <div class="imgContainer">
-            <img src="assets/img/logo-sin-fondo-small.png" alt="logo de la empresa">
+      <div class="imgContainer">
+        <img
+          src="assets/img/logo-sin-fondo-small.png"
+          alt="logo de la empresa"
+        />
+      </div>
+      <div class="redes">
+        <div>
+          <h6>Contacto:</h6>
+          <ul>
+            <li>Business Airlines S.A. Avenida de la Aviación 1234</li>
+            <li>+123 456 7890</li>
+            <li>contacto@businessairlines.com</li>
+          </ul>
         </div>
-        <div class="redes">
-            <div>
-                <h6>Contacto:</h6>
-                <ul>
-                    <li>Business Airlines S.A. Avenida de la Aviación 1234</li>
-                    <li>+123 456 7890</li>
-                    <li>contacto@businessairlines.com</li>
-                </ul>
-            </div>
-            <div>
-                <h6>Redes Sociales:</h6>
-                <ul>
-                    <li><a href="#" target="_blank">Instagram</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">X</a></li>
-                </ul>
-            </div>
+        <div>
+          <h6>Redes Sociales:</h6>
+          <ul>
+            <li><a href="#" target="_blank" title="Instagram">Instagram</a></li>
+            <li><a href="#" title="Facebook">Facebook</a></li>
+            <li><a href="#" title="Red social X">X</a></li>
+          </ul>
         </div>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
