@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aria</title>
+  </head>
+  <body>
+    <!-- Aria label nos proporcionarve una etiqueta descriptiva para los lectores de pantalla -->
+    <button aria-label="Cerrar ventana" onclick="closeModal()">X</button>
+
+    <h3>Roles</h3>
+    <!-- Role nos da informacion extra sobre lo que hay en el contenedor -->
+    <div role="navegacion">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+
+    <!--aria-labelledby lo utilizamos para indicar de que trata el input-->
+
+    <input
+      type="checkbox"
+      id="teminos"
+      aria-checked="false"
+      aria-labelledby="terminos-etiqueta"
+    />
+    <label for="terminos" id="terminos-etiqueta">
+      Acepta los terminos y servicios
+    </label>
+
+    <button id="toggleButton" aria-pressed="false" onclick="toggleButton()">
+      Activar
+    </button>
+    <script>
+      function toggleButton() {
+        const button = document.getElementById("toggleButton");
+        const isPressed = button.getAttribute("aria-pressed") === "true";
+
+        button.setAttribute("aria-pressed", !isPressed);
+        button.textContent = isPressed ? "Activar" : "Desactivar";
+      }
+    </script>
+    <style>
+      button[aria-pressed="true"] {
+        background-color: green;
+        color: white;
+      }
+
+      button[aria-pressed="false"] {
+        background-color: red;
+        color: white;
+      }
+    </style>
+
+    <h3>Anuncios de cambios en notificaciones</h3>
+    <!-- aria-live nos sirve para indicar a lectores que anuncien un cambio en la informacion (notificaciones) -->
+
+    <!-- aria-live = polite >> no interrumpe al usuario -->
+    <!-- aria-live = assertive  >>notifica cambios inmediatos -->
+
+    <div aria-live="polite" id="liveRegion">
+      El contenido que sera anunciado por los lectores de pantalla
+    </div>
+
+    <script>
+      function updateLiveRegion(message) {
+        const liveRegion = document.getElementById("liveRegion");
+        liveRegion.textContent = message;
+      }
+
+      updateLiveRegion("Nuevo mensaje recibido");
+    </script>
+
+    <h3>Menu desplegable</h3>
+
+    <button
+      id="menuButton"
+      aria-haspopup="true"
+      aria-expanded="false"
+      onclick="toggleButton2()"
+    >
+      Menu
+    </button>
+    <ul id="menu" role="menu" aria-labelledby="menuButton" hidden>
+      <li><a href="#item1">Opcion 1</a></li>
+      <li><a href="#item2">Opcion 2</a></li>
+    </ul>
+
+    <script>
+      function toggleButton2() {
+        const menu = document.getElementById("menu");
+        const isExpanded = menu.hidden;
+        menu.hidden = !isExpanded;
+        document
+          .getElementById("menuButton")
+          .setAttribute("aria-expanded", isExpanded);
+      }
+    </script>
+
+    <p>Descripcion adicional ejemplo: Contraseña</p>
+
+    <label for="password">Contraseña</label>
+    <input type="password" id="password" aria-describedby="passwordHelp" />
+    <span id="passwordHelp">
+      La contraseña debe tener al menos 8 caracteres
+    </span>
+    <div
+      id="modal"
+      role="dialog"
+      aria-labelledby="modalTitle"
+      aria-modal="true"
+      hidden
+    >
+      <p>Contenido del modal</p>
+      <button onclick="closeModal()">Cerrar</button>
+    </div>
+    <button onclick="openModal()">Abrir</button>
+
+    <script>
+      function openModal() {
+        const modal = document.getElementById("modal");
+        modal.hidden = false;
+        modal.focus(); // mueve el foco al modal
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("modal");
+        modal.hidden = true;
+      }
+    </script>
+
+    <h3>Barra de progreso</h3>
+
+    <div
+      role="progressbar"
+      aria-valuenow="50"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+      Progress 50%
+    </div>
+  </body>
+</html>

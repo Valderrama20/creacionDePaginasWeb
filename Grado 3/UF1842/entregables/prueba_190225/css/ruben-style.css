@@ -1,0 +1,61 @@
+/* Esitlos generales*/
+
+main {
+  display: flex;
+}
+/* header {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+} */
+.botonCategoria img {
+  width: 60px;
+  height: 50px;
+}
+
+.botonProducto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.botonProducto img {
+  width: 60px;
+  height: 60px;
+}
+.categorias {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  height: 30vh;
+  overflow-y: scroll;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(80px, auto);
+  height: 70vh;
+  overflow-y: scroll;
+  background-color: white;
+}
+.categorias button:hover,
+.productos button:hover {
+  /* background-color: #89e88c; */
+  cursor: pointer;
+}
+
+/* Seccion derecha */
+
+.seccion-derecha {
+  width: 40vw;
+  height: 100vh;
+}
+
+/* .rightBar {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: minmax(30px, auto);
+  height: 100%;
+} */

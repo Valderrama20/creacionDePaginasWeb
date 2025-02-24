@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Accesible</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        color: #333;
+        transition: all 0.3s ease-in-out;
+      }
+
+      button {
+        margin: 5px;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      input,
+      textarea {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0;
+      }
+
+      .high-contrast {
+        background: black;
+        color: yellow;
+      }
+
+      .high-contrast input,
+      .high-contrast textarea {
+        background: black;
+        color: white;
+        border: 1px solid yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Aplicación Web Accesible</h1>
+      <button
+        id="toggle-contrast"
+        aria-label="Activar/desactivar alto contraste"
+      >
+        Alto Contraste
+      </button>
+      <button id="increase-font" aria-label="Aumentar tamaño de fuente">
+        A+
+      </button>
+      <button id="decrease-font" aria-label="Disminuir tamaño de fuente">
+        A-
+      </button>
+    </header>
+
+    <main>
+      <section aria-labelledby="form-title">
+        <h2 id="form-title">Formulario de Contacto</h2>
+        <form id="contact-form">
+          <label for="name">Nombre:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            aria-required="true"
+            required
+          />
+
+          <label for="email">Correo:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            aria-required="true"
+            required
+          />
+
+          <label for="message">Mensaje:</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            aria-required="true"
+            required
+          ></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+        <p id="feedback" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const contrastButton = document.getElementById("toggle-contrast");
+        const increaseFontButton = document.getElementById("increase-font");
+        const decreaseFontButton = document.getElementById("decrease-font");
+        const body = document.body;
+        const form = document.getElementById("contact-form");
+        const feedback = document.getElementById("feedback");
+
+        contrastButton.addEventListener("click", () => {
+          const isConstrasteActive = body.className === "high-contrast";
+
+          if (isConstrasteActive) body.classList.remove("high-contrast");
+          else body.classList.add("high-contrast");
+        });
+
+        // AJuste de tamaño de letra
+        let fontSize = 16;
+
+        increaseFontButton.addEventListener("click", () => {
+          body.style.fontSize = `${(fontSize += 2)}px`;
+        });
+
+        decreaseFontButton.addEventListener("click", () => {
+          if (fontSize > 12) body.style.fontSize = `${(fontSize -= 2)}px`;
+        });
+
+        // Validacion accesible del formulario
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+          feedback.textContent = "Formulario enviado correctamente";
+        });
+
+        // Navegacion con teclado mejorada
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Tab") {
+            document.activeElement.classList.add("focus-visible");
+          }
+        });
+
+        //
+        document.addEventListener("click", () => {
+          document
+            .querySelectorAll(".focus-visible")
+            .forEach((el) => el.classList.remove("focus-visible"));
+        });
+      });
+    </script>
+  </body>
+</html>

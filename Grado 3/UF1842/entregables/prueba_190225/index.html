@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Jose Garcia - valderrama20" />
+    <title>TPV</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/ruben-style.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <!-- Seccion Izquierda -->
+
+      <section class="seccion-izquierda">
+        <!-- Formulario -->
+        <div class="formulario"></div>
+        <!-- Porductos seleccionados -->
+        <div class="porductos-seleccionados">
+          <!-- Creación de tabla básica-->
+          <table class="carritoCompras">
+            <!-- cabecera tabla-->
+            <thead>
+              <tr>
+                <th>Articulo</th>
+                <th>Unidades</th>
+                <th>Precio</th>
+                <!-- <th>Dto. %</th> -->
+                <th>Total</th>
+              </tr>
+            </thead>
+
+            <!--Cuerpo tabla-->
+
+            <tbody id="tablaCuerpo"></tbody>
+          </table>
+        </div>
+        <!-- Porductos seleccionados -->
+        <div class="nuevo-producto">
+          <div>
+            <label for="unidades">Unidades</label>
+            <input id="unidades" type="text" disabled />
+          </div>
+          <div>
+            <label for="precio">Precio</label>
+            <input id="precio" type="text" disabled />
+          </div>
+          <div>
+            <label for="numeroProducto">Produtos</label>
+            <input id="numeroProducto" type="text" disabled />
+          </div>
+          <!-- <input type="text" id="display" disabled /> -->
+        </div>
+
+        <!-- Calculadora -->
+        <div class="calculadora">
+          <div class="calculadora-botones">
+            <button class="button" onclick="agregarNumero('1')">1</button>
+            <button onclick="agregarNumero('2')">2</button>
+            <button onclick="agregarNumero('3')">3</button>
+            <button onclick="agregarNumero('4')">4</button>
+            <button onclick="agregarNumero('5')">5</button>
+            <button onclick="agregarNumero('6')">6</button>
+            <button onclick="agregarNumero('7')">7</button>
+            <button onclick="agregarNumero('8')">8</button>
+            <button onclick="agregarNumero('9')">9</button>
+            <button onclick="agregarNumero('.')">.</button>
+            <button onclick="agregarNumero('0')" class="zero">0</button>
+            <button onclick="limpiarDisplay()">C</button>
+          </div>
+          <div class="calculadora-acciones">
+            <button onclick="cambiarInput('unidades')" class="boton1">
+              Unidad
+            </button>
+            <button onclick="cambiarInput('precio')" class="boton2">
+              Precio
+            </button>
+            <button onclick="cambiarInput('unidades')" class="boton3">
+              Unidad
+            </button>
+            <button onclick="cambiarInput('precio')" class="boton4">
+              Precio
+            </button>
+            <button onclick="cambiarInput('unidades')" class="boton5">
+              Unidad
+            </button>
+            <button onclick="cambiarInput('precio')" class="boton6">
+              Precio
+            </button>
+            <button onclick="agregarProducto() " class="boton7">
+              Agreagar Producto
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seccion Derecha -->
+      <section class="seccion-derecha">
+        <section id="categorias" class="categorias"></section>
+        <section id="productos" class="productos"></section>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </footer>
+
+    <script src="js/datos.js"></script>
+    <script src="js/calculadora.js"></script>
+    <script src="js/productosCategorias.js"></script>
+  </body>
+</html>
