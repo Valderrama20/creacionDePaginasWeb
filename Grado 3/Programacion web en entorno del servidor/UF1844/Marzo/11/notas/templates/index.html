@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi primer app</title>
+    <link rel="stylesheet" href="{{ url_for("static", filename="styles.css")}}">
+  </head>
+  <body>
+    <!-- 1.Frontend (JavaScript):
+    Un formulario para agregar nuevas tareas con un campo de texto y un botón de envío.
+    Una lista que muestre todas las tareas.
+    Cada tarea en la lista debe tener un botón para marcarla como completada y otro para eliminarla.
+    Las tareas completadas deben tener un estilo diferente (por ejemplo, tachado).
+    La lista debe actualizarse dinámicamente sin recargar la página. -->
+    <main class="container">
+      <h1>Lista de tareas</h1>
+      <form id="taskForm">
+        <label for="newTask">Nueva Tarea</label>
+        <input
+          type="text"
+          id="newTask"
+          placeholder="ingresar nueva tarea"
+          required
+        />
+        <button type="submit">Crear tarea</button>
+      </form>
+      <li id="taskList"></li>
+      ç
+
+      <div>
+        <button onclick="updateTask(1)">Actualizar</button>
+        <button onclick="deleteTask(1)">Eliminar</button>
+      </div>
+    </main>
+
+    <script>
+      // Evento en formulario para la creacion de tareas
+      document.getElementById("taskForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        // Obtenemos el valor de la nueva tarea
+        const newTaskName = document.getElementById("newTask").value.trim();
+
+        // Creamos la nueva tarea
+        fetch("/api/task", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name: newTaskName }),
+        })
+          .then((response) => response.json())
+          .then((data) => alert("Tarea creada"));
+      });
+
+      function updateTask(id) {
+        fetch(`/api/task/${id}`, { method: "PUT" }).then(() =>
+          alert("Tarea Actualizda")
+        );
+      }
+
+      function deleteTask(id) {
+        fetch(`/api/task/${id}`, { method: "DELETE" }).then(() =>
+          alert("Eliminada")
+        );
+      }
+
+      window.onload = () => {
+        fetch("/api/task")
+          .then((response) => response.json())
+          .then((data) => console.log(data));
+      };
+    </script>
+  </body>
+</html>
