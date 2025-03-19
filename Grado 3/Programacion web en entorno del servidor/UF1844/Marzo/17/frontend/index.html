@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="auhtor" content="Jose Garcia - valderrama20" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Tienda con carrito</title>
+    </head>
+    <body>
+        <h1 class="title">Tienda Online de Pepe</h1>
+        <div class="productsContainer" id="productsContainer"></div>
+
+        <button id="navBarButton" class="navBarButton">
+            <img src="img/cart.svg" alt="shop cart" />
+        </button>
+
+        <div id="lateralNavBar" class="lateralNavBar">
+            <div class="shopCart">
+                <h2>Lista de compras</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Unidades</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableCartBody"></tbody>
+                </table>
+                <button onclick="buyCart()">Realizar Compra</button>
+            </div>
+        </div>
+        <script src="js/carrito.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/lateralNavBar.js"></script>
+    </body>
+</html>

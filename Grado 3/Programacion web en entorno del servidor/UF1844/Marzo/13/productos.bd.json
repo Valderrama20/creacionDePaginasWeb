@@ -1,0 +1,80 @@
+[
+    {
+        "tipo": "computer",
+        "name": "Macbook Pro",
+        "price": 2000,
+        "stock": 10,
+        "marca": "Apple",
+        "model": "2020",
+        "image": "https://imgs.search.brave.com/6IpTtkFuPhoPNfzMvjrAwXPfNASjYjsHMqnZ57wIbm4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tYWNu/aWFjb3MuZXMvaW1n/L2MvMzQ1LmpwZw"
+    },
+    {
+        "tipo": "computer",
+        "name": "iPhone 11",
+        "price": 1600,
+        "stock": 15,
+        "marca": "Apple",
+        "model": "2024",
+        "image": "https://imgs.search.brave.com/w2UrECcsDIczSi2-zN3zU1MCurXel9TixmrIHpA44cc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9mZG4y/LmdzbWFyZW5hLmNv/bS92di9iaWdwaWMv/YXBwbGUtaXBob25l/LTExLmpwZw"
+    },
+    {
+        "tipo": "computer",
+        "name": "Dell XPS 13",
+        "price": 1500,
+        "stock": 5,
+        "marca": "Dell",
+        "model": "2022",
+        "image": "https://imgs.search.brave.com/rX-PywJkaQzwNVwnquFwF3H9AyZqcv2z1wa_nptaL24/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Y29sYnlicm93bnBo/b3RvZ3JhcGh5LmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/MS8wNy9EZWxsLVhQ/Uy0xMy1PTEVELTc2/OHg2Nzkud2VicA"
+    },
+    {
+        "tipo": "libro",
+        "name": "El Quijote",
+        "price": 25,
+        "stock": 20,
+        "author": "Miguel de Cervantes",
+        "editorial": "Anaya",
+        "image": "https://imgs.search.brave.com/QhUOMAKEwW-lROAormxPmuMnFJSP5kg6BokzS9XUuaM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG9saWZlbW8uY29t/L3N0YXRpYy9pbWcv/cG9ydGFkYXMvX3Zp/c2RfMDAwMEpQRzAy/M1NTLmpwZw"
+    },
+    {
+        "tipo": "libro",
+        "name": "1984",
+        "price": 18,
+        "stock": 30,
+        "author": "George Orwell",
+        "editorial": "Planeta",
+        "image": "https://imgs.search.brave.com/L_pNMFxKwf2tenqXA2G5bZ85QBxF0LF7zM5hR8IMFBc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzA1/ODAvMzg3NC83Mjg1/L2ZpbGVzLzk3ODg0/MTg5MzMwMTFfMV8x/MDI0eDEwMjRfNGUy/MWYyMTUtMTU2Yi00/OGVkLWE2NDktNWQ5/ZTdmNjUwMTRmXzI0/MHgyNDAud2VicD92/PTE2OTI2MjExNzA"
+    },
+    {
+        "tipo": "libro",
+        "name": "Clean Code",
+        "price": 35,
+        "stock": 12,
+        "author": "Robert C. Martin",
+        "editorial": "Prentice Hall",
+        "image": "https://imgs.search.brave.com/0AhK9zBtqUsWlOyPfy54VEwi5SLxUQCs8AxLvHEZvDM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/Lzcxc3R4R3c5SmdM/LmpwZw"
+    },
+    {
+        "tipo": "accesorio",
+        "name": "Mouse inalámbrico",
+        "price": 20,
+        "stock": 50,
+        "type": "Mouse",
+        "image": "https://imgs.search.brave.com/S8sxbfWttb2RxkJz46nDjwF7h7-5soBtif4YIBCz3xQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFBbmxqd0QtU0wu/anBn"
+    },
+    {
+        "tipo": "accesorio",
+        "name": "Teclado mecánico",
+        "price": 70,
+        "stock": 30,
+        "type": "Teclado",
+        "image": "https://imgs.search.brave.com/eotA_JfvcdccgH1mmCucmo4FiyhsYsUS_NOLGsaKxXo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bWVsZ2Vlay5jb20v/Y2RuL3Nob3AvZmls/ZXMvWlFCLmpwZz92/PTE2ODc5NDM3NDAm/d2lkdGg9MTUwMA"
+    },
+    {
+        "tipo": "accesorio",
+        "name": "Cargador USB-C",
+        "price": 25,
+        "stock": 40,
+        "type": "Cargador",
+        "image": "https://imgs.search.brave.com/AGcnppclK3e88YwrbJaLjsPIRvhLflggkeqsqRbz4Ys/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFvNkZ5cUY4Rkwu/anBn"
+    }
+]

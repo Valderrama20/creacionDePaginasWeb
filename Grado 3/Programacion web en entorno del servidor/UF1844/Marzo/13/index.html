@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Jose Garcia - valderrama20" />
+        <title>Tienda con filtro y busqueda</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0px;
+                padding: 0px;
+                height: 100vh;
+                background-color: #f0f0f0;
+                text-align: center;
+            }
+
+            .filters {
+                padding: 20px 0;
+            }
+
+            .gridContainer {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .gridItem {
+                max-width: 200px;
+                text-align: center;
+                background-color: #fff;
+                padding: 10xp;
+                border-radius: 8px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .gridItem img {
+                width: 100%;
+                height: 200px;
+                border-radius: 8px;
+                object-fit: contain;
+            }
+
+            .productDetails {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .boton {
+                margin-top: 10px;
+                padding: 5px 10px;
+                background-color: blue;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .boton:hover {
+                background-color: #0056b3;
+            }
+
+            .rating {
+                margin-top: 10px;
+            }
+
+            .star {
+                font-size: 24px;
+                color: #ccc;
+                cursor: pointer;
+            }
+
+            .star.active {
+                color: #ffcc00;
+            }
+
+            .ocultar {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="filters">
+            <input
+                type="text"
+                id="buscador"
+                placeholder="Buscar productos..."
+            />
+            <select id="filtro-categoria">
+                <option value="todos">Todos</option>
+                <option value="computer">Ordenadores</option>
+                <option value="libro">Libros</option>
+                <option value="accesorio">Accesorios</option>
+            </select>
+        </div>
+
+        <div class="gridContainer" id="gridContainer"></div>
+
+        <script src="clases.js"></script>
+        <script src="carts.js"></script>
+        <script src="filter.js"></script>
+    </body>
+</html>
